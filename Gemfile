@@ -6,17 +6,17 @@
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-
 source "https://rubygems.org"
 
 gem "jekyll", "~> 3.9.0"
 gem "webrick", "~> 1.7"
 gem "jekyll-remote-theme"
-gem "minima", "~> 2.5"
 
 group :jekyll_plugins do
   gem "jekyll-feed"
 end
+
+gem "minima", "~> 2.5"
 
 platforms :mingw, :x64_mingw, :mswin, :jruby do
   gem "tzinfo", ">= 1", "< 3"
