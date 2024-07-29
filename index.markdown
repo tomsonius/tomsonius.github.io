@@ -12,5 +12,7 @@ Discover how to optimize the use of cutting-edge AI models like GPT-4, Gemini Ul
 ## Welcome Video
 
 <div style="text-align: center;">
-  <iframe width="560" height="315" src="https://www.youtube.com/shorts/yTX9cf9pmjQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/yTX9cf9pmjQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+
+
