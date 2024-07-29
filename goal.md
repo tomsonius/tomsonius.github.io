@@ -1,8 +1,12 @@
 ---
 layout: page
-title: AI Models
-permalink: /ai-models/
+title: Goal
+permalink: /goal/
 ---
+
+# Goal
+
+The goal of this website is to educate and empower individuals to effectively use AI technologies. We aim to provide comprehensive guides, tutorials, and resources that cover a wide range of AI applications and use cases.
 
 # different AI Models
 
