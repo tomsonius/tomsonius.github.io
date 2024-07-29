@@ -4,15 +4,6 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+This website is dedicated to providing you with the ultimate guide to using cutting-edge AI models like GPT-4, Gemini Ultra, and custom-made GPTs. Our mission is to help you optimize your workflow, craft powerful prompts, and unlock the full potential of AI.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
-
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+Stay tuned for expert tips, tricks, examples, and insights to make AI work for you!

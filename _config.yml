@@ -20,11 +20,13 @@
 
 title: Your Ultimate AI Guide
 description: >
-  Test update
   Discover how to optimize the use of cutting-edge AI models like GPT-4, Gemini Ultra, and custom-made GPTs to revolutionize your workflow.
 baseurl: ""
 url: "https://tomsonius.github.io"
-theme: hydeout
+theme: tale
+
+plugins:
+  - jekyll-feed
 
 author:
   name: Your Name
@@ -35,9 +37,6 @@ social:
   github: yourusername
   twitter: yourusername
 
-plugins:
-  - jekyll-feed
-  - jekyll-sitemap
 
 
 # Exclude from processing.
