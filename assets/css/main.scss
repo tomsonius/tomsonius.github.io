@@ -9,11 +9,13 @@
   width: 100%;
   top: 0;
   z-index: 1000;
+  display: flex;
+  justify-content: center; /* Centering the navbar */
 }
 
 .navbar .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
