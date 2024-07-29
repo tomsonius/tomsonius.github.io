@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: Understanding AI
 permalink: /understanding-ai/
 ---
