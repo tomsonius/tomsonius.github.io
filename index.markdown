@@ -6,6 +6,7 @@ title: "Welcome to Your Ultimate AI Guide"
 <div class="hero">
   <h1>Welcome to Your Ultimate AI Guide</h1>
   <p>Discover how to optimize the use of cutting-edge AI models like GPT-4, Gemini Ultra, and custom-made GPTs to revolutionize your workflow. Learn to craft powerful prompts and unlock the full potential of AI. Explore our website for expert tips, tricks, examples, and insights to make AI work for you!</p>
+  <a href="{{ site.baseurl }}/goal/" class="button">Learn More</a>
 </div>
 
 <div class="content-section">
