@@ -20,26 +20,24 @@
 
 title: Your Ultimate AI Guide
 description: >
-  This is some test text
+  Test update
   Discover how to optimize the use of cutting-edge AI models like GPT-4, Gemini Ultra, and custom-made GPTs to revolutionize your workflow.
 baseurl: ""
 url: "https://tomsonius.github.io"
-theme: mmistakes/minimal-mistakes
+theme: hydeout
 
 author:
-  name: coso
+  name: Your Name
   avatar: "/assets/images/avatar.png"
   bio: "AI enthusiast and tech blogger."
 
 social:
-  github: tomsonius
+  github: yourusername
+  twitter: yourusername
 
 plugins:
   - jekyll-feed
-  - jekyll-remote-theme
   - jekyll-sitemap
-
-minimal_mistakes_skin: "air"
 
 
 # Exclude from processing.
