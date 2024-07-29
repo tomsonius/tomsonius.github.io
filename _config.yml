@@ -43,6 +43,14 @@ markdown: kramdown
 highlighter: rouge
 theme: minima
 
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+      css: "assets/css/main.css"
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.
