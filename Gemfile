@@ -10,7 +10,8 @@
 source "https://rubygems.org"
 
 gem "jekyll", "~> 4.3.3"
-gem "hydeout", "~> 4.0"
+gem "webrick", "~> 1.7"
+gem "jekyll-remote-theme"
 
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
@@ -22,5 +23,4 @@ platforms :mingw, :x64_mingw, :mswin, :jruby do
   gem "tzinfo-data"
 end
 
-gem "webrick", "~> 1.7"
 gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
