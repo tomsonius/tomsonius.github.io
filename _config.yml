@@ -18,20 +18,23 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-remote-theme
+
+remote_theme: mmistakes/minimal-mistakes
+
+# Site settings
 title: Your Ultimate AI Guide
 description: >
   Discover how to optimize the use of cutting-edge AI models like GPT-4, Gemini Ultra, and custom-made GPTs to revolutionize your workflow.
 baseurl: ""
 url: "https://tomsonius.github.io"
-remote_theme: mmistakes/minimal-mistakes
 
-plugins:
-  - jekyll-remote-theme
-  - jekyll-feed
-
-sass:
-  style: compressed
-
+# Build settings
+markdown: kramdown
+highlighter: rouge
 
 author:
   name: Your Name
@@ -42,9 +45,6 @@ author:
 github: yourusername
 twitter: yourusername
 
-# Build settings
-markdown: kramdown
-highlighter: rouge
 
 
 
