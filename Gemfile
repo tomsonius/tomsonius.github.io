@@ -12,6 +12,7 @@ source "https://rubygems.org"
 gem "jekyll", "~> 3.9.0"
 gem "webrick", "~> 1.7"
 gem "jekyll-remote-theme"
+gem "minima", "~> 2.5"
 
 group :jekyll_plugins do
   gem "jekyll-feed"
