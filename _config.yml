@@ -24,7 +24,7 @@ description: >
   Discover how to optimize the use of cutting-edge AI models like GPT-4, Gemini Ultra, and custom-made GPTs to revolutionize your workflow.
 baseurl: ""
 url: "https://tomsonius.github.io"
-theme: minimal-mistakes-jekyll
+theme: mmistakes/minimal-mistakes
 
 author:
   name: coso
@@ -36,6 +36,7 @@ social:
 
 plugins:
   - jekyll-feed
+  - jekyll-remote-theme
   - jekyll-sitemap
 
 minimal_mistakes_skin: "air"
