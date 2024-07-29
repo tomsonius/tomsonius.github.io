@@ -10,11 +10,16 @@
 source "https://rubygems.org"
 
 gem "jekyll", "~> 3.9.0"
-gem "github-pages", group: :jekyll_plugins
+gem "webrick", "~> 1.7"
+gem "jekyll-remote-theme"
+
+group :jekyll_plugins do
+  gem "jekyll-feed"
+end
 
 platforms :mingw, :x64_mingw, :mswin, :jruby do
   gem "tzinfo", ">= 1", "< 3"
   gem "tzinfo-data"
 end
 
-gem "webrick", "~> 1.7"
+gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]

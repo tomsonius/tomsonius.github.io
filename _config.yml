@@ -23,9 +23,10 @@ description: >
   Discover how to optimize the use of cutting-edge AI models like GPT-4, Gemini Ultra, and custom-made GPTs to revolutionize your workflow.
 baseurl: ""
 url: "https://tomsonius.github.io"
-theme: tale
+remote_theme: chesterhow/tale
 
 plugins:
+  - jekyll-remote-theme
   - jekyll-feed
 
 author:
