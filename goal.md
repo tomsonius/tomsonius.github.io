@@ -4,7 +4,7 @@ title: AI Models
 permalink: /ai-models/
 ---
 
-# AI Models
+# different AI Models
 
 ## GPT-4
 
