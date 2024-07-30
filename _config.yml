@@ -1,4 +1,24 @@
-title: Your Ultimate AI Guide
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+#
+# If you need help with YAML syntax, here are some quick references for you:
+# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
+# https://learnxinyminutes.com/docs/yaml/
+#
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
+title: "Your Ultimate AI Guide"
 description: >
   Discover how to optimize the use of cutting-edge AI models like GPT-4, Gemini Ultra, and custom-made GPTs to revolutionize your workflow.
 baseurl: "" # baseurl is blank for root directory
@@ -16,13 +36,15 @@ exclude:
   - README.md
 
 author:
-  name: Your Name
+  name: "Your Name"
   avatar: "/assets/images/avatar.png"
   bio: "AI enthusiast and tech blogger."
 
-github: yourusername
-twitter: yourusername
+# Social Links
+github: "yourusername"
+twitter: "yourusername"
 
+# Build settings
 markdown: kramdown
 highlighter: rouge
 theme: minima
@@ -39,6 +61,6 @@ footer-col: "#EAEAEA"
 footer-text-col: "#777777"
 footer-link-col: "#404040"
 footer-hover-col: "#0085A1"
-body-font: 'Lora', 'Times New Roman', serif
-header-font: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif
+body-font: "Lora, Times New Roman, serif"
+header-font: "Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif"
 mid-col: "#808080"
