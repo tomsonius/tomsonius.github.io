@@ -12,6 +12,7 @@
 </head>
 <body>
   {% include nav.html %}
+  {% if page.title == "Home" %}
   <header class="hero">
     <div class="container hero-content">
       <h1>Welcome to Your Ultimate AI Guide</h1>
@@ -19,6 +20,7 @@
       <a href="#content" class="button">Explore Now</a>
     </div>
   </header>
+  {% endif %}
   <div class="main-container">
     <aside class="sidebar">
       <ul>
