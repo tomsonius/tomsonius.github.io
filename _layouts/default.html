@@ -21,20 +21,9 @@
     </div>
   </header>
   {% endif %}
-  <div class="main-container">
-    <aside class="sidebar">
-      <ul>
-        <li><a href="{{ site.baseurl }}/goal/">Goal</a></li>
-        <li><a href="{{ site.baseurl }}/ai-models/">AI Models</a></li>
-        <li><a href="{{ site.baseurl }}/understanding-ai/">Understanding AI</a></li>
-        <li><a href="{{ site.baseurl }}/about/">About</a></li>
-        <li><a href="{{ site.baseurl }}/contact/">Contact</a></li>
-      </ul>
-    </aside>
-    <main id="content" class="site-content">
-      {{ content }}
-    </main>
-  </div>
+  <main id="content" class="site-content">
+    {{ content }}
+  </main>
   {% include footer.html %}
 </body>
 </html>
