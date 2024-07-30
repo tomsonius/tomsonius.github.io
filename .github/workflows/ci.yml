@@ -1,15 +1,55 @@
-name: Beautiful Jekyll CI
-on: [push, pull_request]
+name: Build and Deploy Jekyll Site
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
 jobs:
   build:
-    name: Build Jekyll
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.3'
+        
+    - name: Install dependencies
+      run: |
+        gem install bundler
+        bundle install
+
+    - name: Build the site
+      run: bundle exec jekyll build
+
+    - name: Upload site content
+      uses: actions/upload-artifact@v3
+      with:
+        name: site
+        path: ./_site
+
+  deploy:
+    needs: build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: '3.3'
-      - name: Install dependencies
-        run: bundle install && bundle exec appraisal install
-      - name: Build site
-        run: bundle exec appraisal jekyll build --future
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Download site content
+      uses: actions/download-artifact@v3
+      with:
+        name: site
+        path: ./_site
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./_site
