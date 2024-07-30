@@ -18,44 +18,45 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Your Ultimate AI Guide
-description: >
-  Discover how to optimize the use of cutting-edge AI models like GPT-4, Gemini Ultra, and custom-made GPTs to revolutionize your workflow.
-baseurl: "" # baseurl is blank for root directory
-url: "https://tomsonius.github.io"
+title: Your Site Title
+email: your-email@example.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Your description here
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://your-site-url.com" # the base hostname & protocol for your site
 
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
-  - jekyll-sitemap
-
-exclude:
-  - vendor
-  - Gemfile
-  - Gemfile.lock
-  - README.md
-
-author:
-  name: Your Name
-  avatar: "/assets/images/avatar.png"
-  bio: "AI enthusiast and tech blogger."
-
-# Social Links
-github: yourusername
-twitter: yourusername
-
-# Build settings
+paginate: 5
+paginate_path: "/page/:num/"
 markdown: kramdown
-highlighter: rouge
 theme: minima
 
-defaults:
-  -
-    scope:
-      path: ""
-    values:
-      layout: "default"
-      css: "assets/css/main.css"
+# Social Media Links
+social_links:
+  twitter: your-twitter-handle
+  github: your-github-handle
+
+# Navigation links
+navbar-links:
+  - [Home, "/"]
+  - [About, "/about"]
+  - [Blog, "/blog"]
+  - [Contact, "/contact"]
+
+# Optional variables for customizations
+page-col: "#FFFFFF"
+text-col: "#404040"
+link-col: "#008AFF"
+hover-col: "#0085A1"
+navbar-col: "#EAEAEA"
+navbar-text-col: "#404040"
+navbar-border-col: "#DDDDDD"
+footer-col: "#EAEAEA"
+footer-text-col: "#777777"
+footer-link-col: "#404040"
+footer-hover-col: "#0085A1"
+body-font: 'Lora', 'Times New Roman', serif
+header-font: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif
+mid-col: "#808080"
 
 
 # Exclude from processing.

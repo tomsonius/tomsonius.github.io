@@ -12,8 +12,22 @@
 </head>
 <body>
   {% include nav.html %}
-  <main class="container">
+  <main class="container{% if page.full-width %}-fluid{% else %}-md{% endif %}">
+    {% if page.before-content %}
+      <div class="before-content">
+        {% for file in page.before-content %}
+          {% include {{ file }} %}
+        {% endfor %}
+      </div>
+    {% endif %}
     {{ content }}
+    {% if page.after-content %}
+      <div class="after-content">
+        {% for file in page.after-content %}
+          {% include {{ file }} %}
+        {% endfor %}
+      </div>
+    {% endif %}
   </main>
   {% include footer.html %}
 </body>

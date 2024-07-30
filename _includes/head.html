@@ -1,0 +1,31 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% if page.title %}
+      <title>{{ page.title | strip_html }} | {{ site.title | strip_html }}</title>
+    {% else %}
+      <title>{{ site.title | strip_html }}</title>
+    {% endif %}
+    <meta name="description" content="{{ page.excerpt | default: site.description | strip_html }}">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
+    {% if site.favicon %}
+      <link rel="icon" href="{{ site.baseurl }}{{ site.favicon }}" type="image/x-icon">
+    {% endif %}
+    {% for css in site.common-ext-css %}
+      <link rel="stylesheet" href="{{ css.href }}" integrity="{{ css.sri }}" crossorigin="anonymous">
+    {% endfor %}
+    {% for css in site.common-css %}
+      <link rel="stylesheet" href="{{ site.baseurl }}{{ css }}">
+    {% endfor %}
+    {% if site.analytics.google %}
+      <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.analytics.google }}"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '{{ site.analytics.google }}');
+      </script>
+    {% endif %}
+  </head>
+  
