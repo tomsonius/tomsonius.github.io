@@ -1,0 +1,42 @@
+---
+layout: default
+---
+
+<header class="hero">
+  <div class="container">
+    <h1>Welcome to Your Ultimate AI Guide</h1>
+    <p>Explore the latest articles and tutorials on cutting-edge AI technologies.</p>
+  </div>
+</header>
+
+<div class="container">
+  <section class="featured-articles">
+    <h2>Featured Articles</h2>
+    <div class="articles-grid">
+      {% for post in site.posts limit:3 %}
+      <article class="card">
+        <img src="https://via.placeholder.com/300" alt="Article Image">
+        <div class="card-body">
+          <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+          <p>{{ post.excerpt }}</p>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="latest-blogs">
+    <h2>Latest Blogs</h2>
+    <div class="articles-grid">
+      {% for post in site.posts offset:3 limit:3 %}
+      <article class="card">
+        <img src="https://via.placeholder.com/300" alt="Blog Image">
+        <div class="card-body">
+          <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+          <p>{{ post.excerpt }}</p>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+</div>
