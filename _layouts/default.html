@@ -8,16 +8,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title }} - {{ site.title }}</title>
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
   {% include nav.html %}
-  <div id="main">
-    <div class="wrap">
-      <main id="content" class="site-content">
-        {{ content }}
-      </main><!-- #content -->
-    </div><!-- .wrap -->
-  </div><!-- #main -->
+  <header>
+    <div class="hero">
+      <div class="container">
+        <h1>Welcome to Your Ultimate AI Guide</h1>
+        <p>Comprehensive guides, tutorials, and resources on cutting-edge AI models.</p>
+        <a href="#content" class="button">Explore Now</a>
+      </div>
+    </div>
+  </header>
+  <div class="main-container">
+    <aside class="sidebar">
+      <ul>
+        <li><a href="{{ site.baseurl }}/goal/">Goal</a></li>
+        <li><a href="{{ site.baseurl }}/ai-models/">AI Models</a></li>
+        <li><a href="{{ site.baseurl }}/understanding-ai/">Understanding AI</a></li>
+        <li><a href="{{ site.baseurl }}/about/">About</a></li>
+        <li><a href="{{ site.baseurl }}/contact/">Contact</a></li>
+      </ul>
+    </aside>
+    <main id="content" class="site-content">
+      {{ content }}
+    </main>
+  </div>
   {% include footer.html %}
 </body>
 </html>
