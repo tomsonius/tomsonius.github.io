@@ -50,7 +50,8 @@ highlighter: rouge
 theme: minima
 
 defaults:
-  - scope:
+  -
+    scope:
       path: ""
     values:
       layout: "default"
