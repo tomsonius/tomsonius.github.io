@@ -1,0 +1,15 @@
+<aside class="sidebar">
+    <div class="sidebar-content">
+      <h3>About</h3>
+      <p>Learn more about AI and how it can help you.</p>
+      <h3>Recent Posts</h3>
+      <ul>
+        {% for post in site.posts limit:5 %}
+          <li>
+            <a href="{{ post.url }}">{{ post.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </aside>
+  
