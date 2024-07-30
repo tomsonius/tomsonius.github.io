@@ -6,42 +6,25 @@
   <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ site.title }}</title>
+  <title>{{ page.title }} - {{ site.title }}</title>
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
   {% include nav.html %}
+  {% if page.url == "/" %}
   <header class="hero">
-    <div class="container">
+    <div class="container hero-content">
       <h1>Welcome to Your Ultimate AI Guide</h1>
-      <p>Explore the latest articles and tutorials on cutting-edge AI technologies.</p>
+      <p>Comprehensive guides, tutorials, and resources on cutting-edge AI models.</p>
+      <a href="#content" class="button">Explore Now</a>
     </div>
   </header>
-  <div class="content">
-    <section class="featured-articles">
-      <div class="container">
-        <h2>Featured Articles</h2>
-        <div class="articles-grid">
-          <article>
-            <img src="https://via.placeholder.com/300" alt="Article Image">
-            <h3><a href="#">Understanding GPT-4: The Basics</a></h3>
-            <p>Learn the fundamentals of GPT-4 and how it can be applied to various tasks.</p>
-          </article>
-          <article>
-            <img src="https://via.placeholder.com/300" alt="Article Image">
-            <h3><a href="#">Exploring Gemini Ultra: The Next Frontier</a></h3>
-            <p>Dive into the capabilities of Gemini Ultra and its potential impact on AI development.</p>
-          </article>
-          <article>
-            <img src="https://via.placeholder.com/300" alt="Article Image">
-            <h3><a href="#">Custom-Made GPTs: Tailoring AI to Your Needs</a></h3>
-            <p>Discover how custom-made GPTs can be developed to suit specific applications.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-    <!-- Additional sections can be added here -->
+  {% endif %}
+  <div class="main-container">
+    <main id="content" class="site-content">
+      {{ content }}
+    </main>
   </div>
   {% include footer.html %}
 </body>
