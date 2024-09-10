@@ -4,39 +4,59 @@ layout: default
 
 <header class="hero">
   <div class="container">
-    <h1>Welcome to Your Ultimate AI Guide</h1>
-    <p>Explore the latest articles and tutorials on cutting-edge AI technologies.</p>
+    <h1>Exploring the Future of Artificial Intelligence</h1>
+    <p>Insights, analysis, and the latest trends in AI</p>
   </div>
 </header>
 
 <div class="container">
-  <section class="featured-articles">
-    <h2>Featured Articles</h2>
+  <section class="about">
+    <img src="https://via.placeholder.com/100" alt="Author">
+    <h2>About This Blog</h2>
+    <p>Welcome to AI Insights Blog, where we explore the transformative power of artificial intelligence. From machine learning breakthroughs to ethical considerations, our mission is to provide you with the most insightful and up-to-date content on AI. Join us on this journey as we navigate the complexities and potential of AI in today's world.</p>
+  </section>
+
+  <section class="posts">
+    <h2>Recent Posts</h2>
+
     <div class="post-grid">
       {% for post in site.posts limit:3 %}
       <div class="post">
-        <img src="https://via.placeholder.com/400x200" alt="Article Image">
-        <div class="card-body">
-          <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-          <p>{{ post.excerpt }}</p>
-        </div>
+        <img src="https://via.placeholder.com/400x200" alt="Post 1">
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.excerpt }}</p>
+        <a href="{{ post.url }}">Read More</a>
       </div>
       {% endfor %}
     </div>
   </section>
 
-  <section class="latest-blogs">
-    <h2>Latest Blogs</h2>
-    <div class="post-grid">
-      {% for post in site.posts offset:3 limit:3 %}
-      <div class="post">
-        <img src="https://via.placeholder.com/400x200" alt="Blog Image">
-        <div class="card-body">
-          <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-          <p>{{ post.excerpt }}</p>
-        </div>
-      </div>
-      {% endfor %}
+  <section class="categories">
+    <h2>Categories</h2>
+    <div class="category">
+      <h3>Machine Learning</h3>
+      <p>Explore the latest developments in machine learning algorithms and applications.</p>
     </div>
+    <div class="category">
+      <h3>Natural Language Processing</h3>
+      <p>Dive into NLP, the technology behind voice assistants and language translation tools.</p>
+    </div>
+    <div class="category">
+      <h3>AI Ethics</h3>
+      <p>Understand the ethical implications of AI and how we can ensure responsible development.</p>
+    </div>
+    <div class="category">
+      <h3>Robotics</h3>
+      <p>Discover how AI is revolutionizing robotics and automation across industries.</p>
+    </div>
+  </section>
+
+  <section class="newsletter">
+    <h2>Subscribe to Our Newsletter</h2>
+    <p>Get the latest AI news and updates delivered straight to your inbox.</p>
+    <form action="#">
+      <input type="email" placeholder="Enter your email">
+      <button type="submit">Subscribe</button>
+    </form>
   </section>
 </div>
