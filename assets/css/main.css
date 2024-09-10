@@ -2,22 +2,25 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  line-height: 1.6;
-  background-color: #f4f4f4;
-  color: #333;
+  line-height: 1.7; /* Slightly increased line height */
+  background-color: #e0e0e0; /* Slightly darker background */
+  color: #333333; /* Slightly lighter text color */
 }
+
 header {
   background: #333;
   color: #fff;
   padding: 10px 0;
   text-align: center;
 }
+
 nav a {
   color: #fff;
   margin: 0 15px;
   text-decoration: none;
   font-size: 18px;
 }
+
 .hero {
   background: url('https://source.unsplash.com/featured/?ai,technology') no-repeat center center/cover;
   height: 300px;
@@ -27,20 +30,31 @@ nav a {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  position: relative;
 }
-.hero h1 {
-  font-size: 48px;
-  margin: 0;
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
+  z-index: 1;
 }
-.hero p {
-  font-size: 20px;
+
+.hero h1, .hero p {
+  z-index: 2;
 }
+
 .container {
   width: 80%;
   margin: auto;
   overflow: hidden;
   padding: 20px 0;
 }
+
 .about, .posts, .categories, .newsletter {
   background: #fff;
   margin: 20px 0;
@@ -48,6 +62,7 @@ nav a {
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
 .about img {
   float: left;
   margin-right: 20px;
@@ -55,14 +70,17 @@ nav a {
   width: 100px;
   height: 100px;
 }
+
 .about p {
   font-size: 18px;
   margin: 0;
 }
+
 .post-grid {
   display: flex;
   gap: 20px;
 }
+
 .post {
   background: #fff;
   padding: 20px;
@@ -75,42 +93,50 @@ nav a {
   align-items: center;
   text-align: center;
 }
+
 .post img {
   width: 100%;
   height: auto;
   border-radius: 8px;
   transition: transform 0.3s ease;
 }
+
 .post h3 {
   font-size: 24px;
   margin: 15px 0;
   color: #333;
 }
+
 .post p {
   font-size: 16px;
   margin-bottom: 15px;
   color: #666;
 }
+
 .post a {
   text-decoration: none;
-  color: #007bff;
+  color: #0088cc; /* New accent color */
   font-weight: bold;
   padding: 10px 15px;
   border-radius: 4px;
   background: #f4f4f4;
   transition: background 0.3s ease, color 0.3s ease;
 }
+
 .post a:hover {
-  background: #007bff;
+  background: #0088cc; /* Accent color on hover */
   color: #fff;
 }
+
 .post:hover {
-  transform: translateY(-10px);
+  transform: translateY(-5px); /* Less dramatic hover effect */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
+
 .post:hover img {
   transform: scale(1.05);
 }
+
 .newsletter input[type="email"] {
   padding: 10px;
   margin-right: 10px;
@@ -119,6 +145,7 @@ nav a {
   border: 1px solid #ccc;
   border-radius: 4px;
 }
+
 .newsletter button {
   padding: 10px 20px;
   font-size: 16px;
@@ -128,6 +155,7 @@ nav a {
   border-radius: 4px;
   cursor: pointer;
 }
+
 footer {
   background: #333;
   color: #fff;
@@ -135,8 +163,14 @@ footer {
   padding: 20px 0;
   margin-top: 20px;
 }
+
 footer p, footer a {
   font-size: 14px;
   color: #fff;
   margin: 5px 0;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #0088cc; /* Accent color on hover for links in footer */
 }
