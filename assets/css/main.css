@@ -33,7 +33,7 @@ nav a:hover {
 
 .hero {
   background: url('https://source.unsplash.com/featured/?ai,technology') no-repeat center center/cover;
-  height: 300px;
+  height: 250px; /* Reduced height for better visibility */
   color: #fff;
   text-align: center;
   display: flex;
@@ -41,16 +41,16 @@ nav a:hover {
   align-items: center;
   flex-direction: column;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-  padding-top: 50px;
+  padding-top: 20px; /* Reduced padding to bring content higher */
 }
 
 .hero h1 {
-  font-size: 48px;
+  font-size: 40px; /* Reduced font size for better fit */
   margin: 0;
 }
 
 .hero p {
-  font-size: 20px;
+  font-size: 18px; /* Adjusted font size */
   margin-top: 10px;
   padding: 0 10%;
 }
@@ -59,7 +59,7 @@ nav a:hover {
   width: 85%;
   margin: auto;
   overflow: hidden;
-  padding: 20px 0;
+  padding: 10px 0; /* Reduced padding */
 }
 
 .about, .posts, .categories, .newsletter {
@@ -73,14 +73,13 @@ nav a:hover {
 .about {
   display: flex;
   align-items: center;
-  padding-top: 50px;
 }
 
 .about img {
   margin-right: 25px;
   border-radius: 50%;
-  width: 120px;
-  height: 120px;
+  width: 100px; /* Reduced size to match layout */
+  height: 100px;
 }
 
 .about p {
@@ -92,7 +91,7 @@ nav a:hover {
 .post-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 25px;
+  gap: 20px; /* Reduced gap for tighter layout */
 }
 
 .post {
@@ -101,12 +100,11 @@ nav a:hover {
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  width: calc(33.333% - 25px);
+  width: calc(33.333% - 20px);
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  position: relative;
 }
 
 .post img {
@@ -117,14 +115,14 @@ nav a:hover {
 }
 
 .post h3 {
-  font-size: 24px;
+  font-size: 22px; /* Adjusted for better fit */
   margin: 15px 0;
   color: #222;
 }
 
 .post p {
-  font-size: 16px;
-  margin-bottom: 20px;
+  font-size: 15px;
+  margin-bottom: 15px;
   color: #666;
 }
 
@@ -201,7 +199,7 @@ footer a:hover {
 
 @media (max-width: 768px) {
   .post {
-    width: calc(50% - 25px);
+    width: calc(50% - 20px);
   }
 
   .about {
@@ -220,11 +218,11 @@ footer a:hover {
   }
 
   .hero h1 {
-    font-size: 32px;
+    font-size: 28px;
   }
 
   .hero p {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .newsletter input[type="email"] {
