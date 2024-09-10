@@ -28,18 +28,23 @@ nav a:hover {
     color: #ff5722;
 }
 
+.container {
+    width: 85%;
+    margin: auto;
+    padding: 20px 0;
+}
+
 .about-section {
     background-color: #f8f9fa;
     padding: 40px 0;
 }
 
 .about {
-    width: 85%;
-    margin: auto;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    text-align: center;
+    text-align: left;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 20px;
 }
 
 .about img {
@@ -49,9 +54,12 @@ nav a:hover {
     height: 100px;
 }
 
+.about-text {
+    max-width: 70%;
+}
+
 .about p {
     font-size: 18px;
-    margin-top: 10px;
     color: #444;
     line-height: 1.8;
 }
@@ -67,13 +75,13 @@ nav a:hover {
 }
 
 .posts {
-    width: 85%;
-    margin: auto;
+    text-align: left;
 }
 
 .post-grid {
     display: flex;
     gap: 20px;
+    justify-content: space-between;
 }
 
 .post {
@@ -82,7 +90,7 @@ nav a:hover {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 32%;
+    width: 30%;
     text-align: center;
 }
 
@@ -131,11 +139,10 @@ nav a:hover {
 .newsletter-section {
     background-color: #f8f9fa;
     padding: 40px 0;
+    border-top: 2px solid #e0e0e0;
 }
 
 .newsletter {
-    width: 85%;
-    margin: auto;
     text-align: center;
 }
 
