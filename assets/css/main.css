@@ -3,19 +3,16 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background-color: #f2f2f2;
+    background-color: #f8f9fa;
     color: #333;
 }
 
 header {
-    background: #003366;
+    background: #004085;
     color: #fff;
-    padding: 15px 0;
+    padding: 10px 0;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
 }
 
 nav a {
@@ -28,18 +25,26 @@ nav a {
 }
 
 nav a:hover {
-    color: #ffdd57;
+    color: #ff5722;
+}
+
+.container {
+    width: 85%;
+    margin: auto;
+    padding: 20px 0;
+}
+
+.about-section {
+    background-color: #f8f9fa;
+    padding: 40px 0;
 }
 
 .about {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    background: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
+    text-align: left;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 20px;
 }
 
 .about img {
@@ -49,26 +54,34 @@ nav a:hover {
     height: 100px;
 }
 
-.about h2 {
-    font-size: 28px;
-    margin-bottom: 10px;
+.about-text {
+    max-width: 70%;
 }
 
 .about p {
     font-size: 18px;
-    margin: 0;
-    line-height: 1.6;
-    color: #333;
+    color: #444;
+    line-height: 1.8;
+}
+
+.highlight {
+    color: #ff5722;
+    font-weight: bold;
+}
+
+.posts-section {
+    background-color: #fff;
+    padding: 40px 0;
 }
 
 .posts {
-    margin-top: 20px;
+    text-align: left;
 }
 
 .post-grid {
     display: flex;
+    gap: 20px;
     justify-content: space-between;
-    flex-wrap: wrap;
 }
 
 .post {
@@ -77,8 +90,7 @@ nav a:hover {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: calc(33% - 20px);
-    margin-bottom: 20px;
+    width: 30%;
     text-align: center;
 }
 
@@ -90,78 +102,122 @@ nav a:hover {
 }
 
 .post h3 {
-   Here are the full updated codes for `index.html`, `about.html`, `contact.html`, and `main.css`.
+    font-size: 22px;
+    margin: 15px 0;
+    color: #222;
+}
 
-### `index.html`
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Insights Blog</title>
-    <link rel="stylesheet" href="assets/css/main.css">
-</head>
-<body>
-    <header>
-        <h1>AI Insights Blog</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="blog.html">Blog</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
+.post p {
+    font-size: 15px;
+    margin-bottom: 15px;
+    color: #666;
+}
 
-    <section class="about">
-        <img src="https://via.placeholder.com/100" alt="About This Blog">
-        <div class="about-text">
-            <h2>About This Blog</h2>
-            <p>Welcome to <span class="highlight">AI Insights Blog</span>, where we explore the <span class="highlight">transformative power of AI</span>. Dive into <span class="highlight">insightful content</span> on the latest advancements, ethical considerations, and industry trends in AI. Stay informed and ahead of the curve!</p>
-        </div>
-    </section>
+.post a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 12px 18px;
+    border-radius: 5px;
+    background: #ff5722;
+    transition: background 0.3s ease, color 0.3s ease;
+}
 
-    <section class="posts">
-        <h2>Recent Posts</h2>
-        <div class="post-grid">
-            <div class="post">
-                <img src="https://via.placeholder.com/400x200" alt="Understanding Neural Networks">
-                <h3>Understanding Neural Networks</h3>
-                <p>Discover how neural networks work and their applications.</p>
-                <a href="#">Read More</a>
-            </div>
-            <div class="post">
-                <img src="https://via.placeholder.com/400x200" alt="The Ethics of AI">
-                <h3>The Ethics of AI: What You Need to Know</h3>
-                <p>Explore the key ethical issues in AI development.</p>
-                <a href="#">Read More</a>
-            </div>
-            <div class="post">
-                <img src="https://via.placeholder.com/400x200" alt="AI Trends 2024">
-                <h3>Top 10 AI Trends to Watch in 2024</h3>
-                <p>Stay ahead of the curve with our list of the most important AI trends.</p>
-                <a href="#">Read More</a>
-            </div>
-        </div>
-    </section>
+.post a:hover {
+    background: #e64a19;
+}
 
-    <section class="newsletter">
-        <h2>Subscribe to Our Newsletter</h2>
-        <p>Get the latest AI news and updates delivered straight to your inbox.</p>
-        <form action="#">
-            <input type="email" placeholder="Enter your email">
-            <button type="submit">Subscribe</button>
-        </form>
-    </section>
+.post:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
 
-    <footer>
-        <p>&copy; 2024 AI Insights Blog. All Rights Reserved.</p>
-        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
-        <p>Follow us on 
-            <a href="#">Twitter</a>, 
-            <a href="#">LinkedIn</a>, 
-            <a href="#">Facebook</a>
-        </p>
-    </footer>
-</body>
-</html>
+.post:hover img {
+    transform: scale(1.08);
+}
+
+.newsletter-section {
+    background-color: #f8f9fa;
+    padding: 40px 0;
+    border-top: 2px solid #e0e0e0;
+}
+
+.newsletter {
+    text-align: center;
+}
+
+.newsletter input[type="email"] {
+    padding: 12px;
+    font-size: 17px;
+    width: 50%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.newsletter button {
+    padding: 12px 20px;
+    font-size: 17px;
+    background: #ff5722;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.newsletter button:hover {
+    background: #e64a19;
+}
+
+footer {
+    background: #004085;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p, footer a {
+    font-size: 15px;
+    color: #ddd;
+    margin: 7px 0;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #ffdd57;
+}
+
+@media (max-width: 768px) {
+    .post {
+        width: 48%;
+    }
+
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about img {
+        margin-bottom: 20px;
+    }
+
+    .newsletter input[type="email"] {
+        width: 70%;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .post {
+        width: 100%;
+    }
+
+    .newsletter input[type="email"] {
+        width: 100%;
+    }
+}
