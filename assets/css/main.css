@@ -8,18 +8,21 @@ body {
 }
 
 header {
-  background: #003366;
+  background: linear-gradient(to right, #0056b3, #004080);
   color: #fff;
-  padding: 10px 0;
+  padding: 20px 0;
   text-align: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 nav a {
   color: #fff;
   margin: 0 20px;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
   transition: color 0.3s ease;
 }
@@ -28,35 +31,64 @@ nav a:hover {
   color: #ffdd57;
 }
 
+.hero {
+  background: url('https://source.unsplash.com/featured/?ai,technology') no-repeat center center/cover;
+  height: 150px;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  padding: 20px 0;
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin: 0;
+}
+
+.hero p {
+  font-size: 16px;
+  margin-top: 10px;
+  padding: 0 10%;
+}
+
 .container {
-  width: 85%;
+  width: 90%;
   margin: auto;
   overflow: hidden;
   padding: 10px 0;
 }
 
-.about, .posts, .newsletter {
+.posts, .categories, .newsletter {
   background: #fff;
   margin: 20px 0;
-  padding: 20px;
+  padding: 30px;
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
 .about {
+  background: #fff;
+  margin: 20px 0;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
 }
 
 .about img {
-  margin-right: 20px;
+  margin-right: 25px;
   border-radius: 50%;
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
 }
 
 .about p {
-  font-size: 16px;
+  font-size: 18px;
   margin: 0;
   line-height: 1.8;
 }
@@ -69,11 +101,15 @@ nav a:hover {
 
 .post {
   background: #fff;
-  padding: 15px;
+  padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   width: calc(33.333% - 20px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   cursor: pointer;
 }
 
@@ -85,14 +121,14 @@ nav a:hover {
 }
 
 .post h3 {
-  font-size: 20px;
-  margin: 10px 0;
+  font-size: 22px;
+  margin: 15px 0;
   color: #222;
 }
 
 .post p {
-  font-size: 14px;
-  margin-bottom: 10px;
+  font-size: 15px;
+  margin-bottom: 15px;
   color: #666;
 }
 
@@ -110,18 +146,18 @@ nav a:hover {
 }
 
 .newsletter input[type="email"] {
-  padding: 10px;
+  padding: 12px;
   margin-right: 10px;
-  font-size: 16px;
+  font-size: 17px;
   width: 60%;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
 
 .newsletter button {
-  padding: 10px 20px;
-  font-size: 16px;
-  background: #003366;
+  padding: 12px 20px;
+  font-size: 17px;
+  background: #ff5722;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -130,21 +166,22 @@ nav a:hover {
 }
 
 .newsletter button:hover {
-  background: #002244;
+  background: #e64a19;
 }
 
 footer {
-  background: #003366;
+  background: #222;
   color: #fff;
   text-align: center;
   padding: 20px 0;
   margin-top: 30px;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
 }
 
 footer p, footer a {
-  font-size: 14px;
+  font-size: 15px;
   color: #ddd;
-  margin: 5px 0;
+  margin: 7px 0;
   text-decoration: none;
 }
 
@@ -170,6 +207,14 @@ footer a:hover {
 @media (max-width: 480px) {
   .post {
     width: 100%;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 16px;
   }
 
   .newsletter input[type="email"] {
