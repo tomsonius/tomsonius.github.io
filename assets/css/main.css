@@ -8,7 +8,7 @@ body {
 }
 
 header {
-  background: linear-gradient(to right, #007bff, #00c6ff);
+  background: linear-gradient(to right, #0056b3, #004080);
   color: #fff;
   padding: 20px 0;
   text-align: center;
@@ -33,7 +33,7 @@ nav a:hover {
 
 .hero {
   background: url('https://source.unsplash.com/featured/?ai,technology') no-repeat center center/cover;
-  height: 150px; /* Reduced height to bring content higher */
+  height: 150px;
   color: #fff;
   text-align: center;
   display: flex;
@@ -45,7 +45,7 @@ nav a:hover {
 }
 
 .hero h1 {
-  font-size: 36px; /* Reduced font size */
+  font-size: 36px;
   margin: 0;
 }
 
@@ -71,7 +71,26 @@ nav a:hover {
 }
 
 .about {
-  display: none; /* Hide the about section initially */
+  background: #fff;
+  margin: 20px 0;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+}
+
+.about img {
+  margin-right: 25px;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.about p {
+  font-size: 18px;
+  margin: 0;
+  line-height: 1.8;
 }
 
 .post-grid {
@@ -91,8 +110,7 @@ nav a:hover {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  text-decoration: none;
-  color: inherit;
+  cursor: pointer;
 }
 
 .post img {
