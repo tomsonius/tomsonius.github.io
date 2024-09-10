@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title }} | {{ site.title }}</title>
   <style>
+    /* Add your provided CSS here */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -151,7 +152,7 @@
 </head>
 <body>
   {% include nav.html %}
-  <main class="container{% if page.full-width %}-fluid{% else %}-md{% endif %}">
+  <main class="container">
     {{ content }}
   </main>
   {% include footer.html %}
