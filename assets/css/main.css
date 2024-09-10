@@ -10,7 +10,7 @@ body {
 header {
   background: #0d47a1;
   color: #fff;
-  padding: 15px 0;
+  padding: 10px 0; /* Reduced header size */
   text-align: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   position: sticky;
@@ -42,6 +42,7 @@ nav a:hover {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
+  text-align: center; /* Centering text */
 }
 
 .about img {
@@ -51,15 +52,22 @@ nav a:hover {
   height: 100px;
 }
 
+.about h2 {
+  margin-bottom: 10px; /* Increase gap between title and text */
+}
+
 .about p {
   font-size: 18px;
   margin: 0;
   line-height: 1.8;
+  max-width: 700px; /* Center content */
+  text-align: left; /* Align text to left */
+  margin: auto; /* Center align */
 }
 
 .post-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr); /* 3 posts in a row */
   gap: 20px;
 }
 
@@ -139,6 +147,7 @@ nav a:hover {
   border-radius: 5px;
   cursor: pointer;
   transition: background 0.3s ease;
+  vertical-align: middle; /* Aligns button with input */
 }
 
 .newsletter button:hover {
