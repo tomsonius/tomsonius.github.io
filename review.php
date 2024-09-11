@@ -1,4 +1,10 @@
 <?php
+session_start();
+if (!isset($_SESSION['authenticated'])) {
+    header("Location: login.html"); // Redirect to login page
+    exit();
+}
+
 // Read the pending reviews file
 $pending_reviews = file('pending_reviews.json', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
 
@@ -36,12 +42,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Review Submissions</title>
+    <title>Review Submissions | AI Insights Blog</title>
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
     <header>
-        <h1>Review Submitted Articles</h1>
+        <h1>AI Insights Blog - Review Submissions</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="blog.html">Blog</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
     </header>
 
     <div class="container">
@@ -63,5 +75,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <?php endforeach; ?>
         </ul>
     </div>
+
+    <footer>
+        <p>&copy; 2024 AI Insights Blog. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
