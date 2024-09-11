@@ -4,7 +4,6 @@ title: "Understanding Neural Networks"
 date: 2024-09-15
 categories: [ai, neural-networks]
 excerpt: "A deep dive into the fundamentals of neural networks and their applications."
-display_image: "https://via.placeholder.com/400x200"
 ---
 
 ![Understanding Neural Networks](https://via.placeholder.com/400x200)
