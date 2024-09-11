@@ -1,0 +1,14 @@
+{% for js in site.common-ext-js %}
+  <script src="{{ js.href }}" integrity="{{ js.sri }}" crossorigin="anonymous"></script>
+{% endfor %}
+{% for js in site.common-js %}
+  <script src="{{ site.baseurl }}{{ js }}"></script>
+{% endfor %}
+{% if site.analytics.google %}
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '{{ site.analytics.google }}');
+  </script>
+{% endif %}

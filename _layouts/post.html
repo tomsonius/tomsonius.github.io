@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ page.title }}</title>
+</head>
+<body>
+    <header>
+        <h1>{{ site.title }}</h1>
+        <nav>
+            <a href="{{ site.baseurl }}/">Home</a>
+            <a href="{{ site.baseurl }}/blog.html">Blog</a>
+        </nav>
+    </header>
+
+    <article>
+        <h1>{{ page.title }}</h1>
+        <p>{{ page.date | date: "%B %d, %Y" }}</p>
+        <div>
+            {{ content }}
+        </div>
+    </article>
+
+    <footer>
+        <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}</p>
+    </footer>
+</body>
+</html>
