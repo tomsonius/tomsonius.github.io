@@ -28,7 +28,9 @@ plugins:
 # Include these files in the build
 include:
   - _posts
-  - _posts/images # Ensure images within _posts are included
+  - _layouts
+  - _includes
+  - assets
 
 # Exclude these files from the build
 exclude:
@@ -36,6 +38,8 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
+  - .gitignore
+  - test.py
 
 # Build settings
 markdown: kramdown
