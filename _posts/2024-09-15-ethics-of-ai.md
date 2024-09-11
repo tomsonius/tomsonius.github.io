@@ -4,7 +4,6 @@ title: "The Ethics of AI: What You Need to Know"
 date: 2024-09-15
 categories: [ai, ethics]
 excerpt: "Exploring the critical ethical issues surrounding AI, from bias to accountability."
-display_image: "https://via.placeholder.com/400x200"
 ---
 
 ![Ethics of AI](https://via.placeholder.com/400x200)
