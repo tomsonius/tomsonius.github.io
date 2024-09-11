@@ -11,13 +11,13 @@
 # If you need help with YAML syntax, here are some quick references for you:
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
-#
+
 # Site settings
 title: "AI Insights Blog"
 description: >
   Discover how to optimize the use of cutting-edge AI models like GPT-4, Gemini Ultra, and custom-made GPTs to revolutionize your workflow.
 baseurl: "" # Leave this blank for the root directory
-url: "https://tomsonius.github.io"
+url: "https://tomsonius.github.io" # Update with your repository's URL
 
 # Plugins
 plugins:
@@ -28,7 +28,7 @@ plugins:
 # Include these files in the build
 include:
   - _posts
-  - assets
+  - _posts/images # Ensure images within _posts are included
 
 # Exclude these files from the build
 exclude:
@@ -36,16 +36,6 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
-
-# Author information
-author:
-  name: "Your Name"
-  avatar: "/assets/images/avatar.png"
-  bio: "AI enthusiast and tech blogger."
-
-# Social Links
-github: "yourusername"
-twitter: "yourusername"
 
 # Build settings
 markdown: kramdown
