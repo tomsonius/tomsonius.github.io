@@ -24,20 +24,17 @@
     </section>
 
     <section class="posts">
-        <h2>Recent Posts</h2>
-        <div class="post-grid">
-            {% for post in site.posts limit:3 %}
-            <div class="post">
-                {% if post.display_image %}
-                <img src="{{ post.display_image }}" alt="{{ post.title }}">
-                {% endif %}
-                <h3>{{ post.title }}</h3>
-                <p>{{ post.excerpt }}</p>
-                <a href="{{ post.url }}">Read More</a>
-            </div>
-            {% endfor %}
+    <h2>Recent Posts</h2>
+    <div class="post-grid">
+        {% for post in site.posts limit:3 %}
+        <div class="post">
+            <h3>{{ post.title }}</h3>
+            <p>{{ post.excerpt }}</p>
+            <a href="{{ post.url }}">Read More</a>
         </div>
-    </section>
+        {% endfor %}
+    </div>
+</section>
 
     <section class="newsletter">
         <h2>Subscribe to Our Newsletter</h2>
