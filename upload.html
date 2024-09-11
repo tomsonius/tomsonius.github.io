@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Submit Your Article</title>
+    <title>Upload Article | AI Insights Blog</title>
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
     <header>
-        <h1>Submit Your Article</h1>
+        <h1>AI Insights Blog - Upload Article</h1>
         <nav>
             <a href="index.html">Home</a>
             <a href="blog.html">Blog</a>
@@ -18,34 +18,29 @@
     </header>
 
     <div class="container">
-        <h2>Upload Article</h2>
-        <form action="submit_article.php" method="POST" enctype="multipart/form-data">
-            <label for="title">Article Title:</label><br>
-            <input type="text" id="title" name="title" required><br><br>
+        <h2>Submit a New Article</h2>
+        <form method="POST" action="submit_article.php" enctype="multipart/form-data">
+            <label for="title">Article Title:</label>
+            <input type="text" id="title" name="title" required>
 
-            <label for="category">Category:</label><br>
-            <select id="category" name="category">
-                <option value="ai">AI</option>
-                <option value="neural-networks">Neural Networks</option>
-                <option value="ethics">Ethics</option>
-            </select><br><br>
+            <label for="category">Category:</label>
+            <input type="text" id="category" name="category" required>
 
-            <label for="markdown">Article File (Markdown):</label><br>
-            <input type="file" id="markdown" name="markdown" accept=".md" required><br><br>
+            <label for="markdown">Upload Markdown File:</label>
+            <input type="file" id="markdown" name="markdown" accept=".md" required>
 
-            <label for="images">Associated Images (optional):</label><br>
-            <input type="file" id="images" name="images[]" accept="image/*" multiple><br><br>
+            <label for="display_image">Upload Display Image:</label>
+            <input type="file" id="display_image" name="display_image" accept="image/*" required>
 
-            <label for="display_image">Display Image (for Homepage):</label><br>
-            <input type="file" id="display_image" name="display_image" accept="image/*" required><br><br>
+            <label for="images">Upload Additional Images (optional):</label>
+            <input type="file" id="images" name="images[]" accept="image/*" multiple>
 
-            <input type="submit" value="Submit Article">
+            <button type="submit">Submit Article</button>
         </form>
     </div>
 
     <footer>
         <p>&copy; 2024 AI Insights Blog. All Rights Reserved.</p>
-        <p>Follow us on <a href="#">Twitter</a>, <a href="#">LinkedIn</a>, <a href="#">Facebook</a></p>
     </footer>
 </body>
 </html>
