@@ -28,7 +28,11 @@
         <div class="post-grid">
             {% for post in site.posts limit:3 %}
             <div class="post">
-                <img src="{{ post.display_image }}" alt="{{ post.title }}">
+                {% if post.display_image %}
+                    <img src="{{ post.display_image }}" alt="{{ post.title }}">
+                {% else %}
+                    <img src="https://via.placeholder.com/400x200" alt="{{ post.title }}">
+                {% endif %}
                 <h3>{{ post.title }}</h3>
                 <p>{{ post.excerpt }}</p>
                 <a href="{{ post.url }}">Read More</a>
