@@ -18,6 +18,8 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
+# Welcome to Jekyll!
+
 # Site settings
 title: "AI Insights Blog"
 description: >
@@ -30,6 +32,11 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
+
+# Include these files in the build
+include:
+  - _posts
+  - assets
 
 # Exclude these files from the build
 exclude:
@@ -51,6 +58,18 @@ twitter: "yourusername"
 # Build settings
 markdown: kramdown
 highlighter: rouge
+
+# Jekyll theme settings
+theme: minima
+
+# Plugins configuration
+jekyll-feed:
+  path: feed.xml
+
+jekyll-sitemap:
+  changefreq: daily
+  priority: 0.7
+
 
 # Custom CSS (optional variables - removed if not used)
 # Removing theme reference
