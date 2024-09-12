@@ -1,20 +1,17 @@
 ---
-layout: page
+layout: default
 title: Blog
 ---
 
 <div class="container">
     <h2>Blog</h2>
-    {% if site.posts.size > 0 %}
-        <ul>
-            {% for post in site.posts %}
-            <li>
-                <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-                <p>{{ post.excerpt }}</p>
-            </li>
-            {% endfor %}
-        </ul>
-    {% else %}
-        <p>No posts found.</p>
-    {% endif %}
+    <ul>
+        {% for post in site.posts %}
+        <li>
+            <h3>{{ post.title }}</h3>
+            <p>{{ post.excerpt }}</p>
+            <a href="{{ post.url }}" class="button">Read More</a>
+        </li>
+        {% endfor %}
+    </ul>
 </div>
