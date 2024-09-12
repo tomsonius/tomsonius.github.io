@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Understanding Neural Networks"
 date: 2024-09-15
 categories: [ai, neural-networks]
