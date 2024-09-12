@@ -26,7 +26,7 @@
 <section class="posts">
     <h2>Recent Posts</h2>
     <div class="post-grid">
-        {% if site.posts.size > 0 %}
+        {% if site.posts and site.posts.size > 0 %}
             {% for post in site.posts limit:3 %}
             <div class="post">
                 <h3>{{ post.title }}</h3>
@@ -39,8 +39,7 @@
         {% endif %}
     </div>
 </section>
-
-    
+  
     <section class="newsletter">
         <h2>Subscribe to Our Newsletter</h2>
         <p>Get the latest AI news and updates delivered straight to your inbox.</p>
