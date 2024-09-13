@@ -34,11 +34,10 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
+        git remote set-url origin https://${{ secrets.PERSONAL_TOKEN }}@github.com/tomsonius/tomsonius.github.io.git
         git add Gemfile.lock
         git commit -m "Update Gemfile.lock"
         git push
-      env:
-        GITHUB_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
 
     - name: Build the site
       run: bundle exec jekyll build
