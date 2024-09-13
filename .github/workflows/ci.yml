@@ -30,6 +30,16 @@ jobs:
         gem install bundler
         bundle install
 
+    - name: Commit Gemfile.lock
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add Gemfile.lock
+        git commit -m "Update Gemfile.lock"
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
     - name: Build the site
       run: bundle exec jekyll build
 
