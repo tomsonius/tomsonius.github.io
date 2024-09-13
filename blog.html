@@ -3,15 +3,12 @@ layout: default
 title: Blog
 ---
 
-<div class="container">
-    <h2>Blog</h2>
+
+<section class="post-titles">
+    <h2>All Post Titles</h2>
     <ul>
         {% for post in site.posts %}
-        <li>
-            <h3>{{ post.title }}</h3>
-            <p>{{ post.excerpt }}</p>
-            <a href="{{ post.url }}" class="button">Read More</a>
-        </li>
+            <li>{{ post.title }}</li>
         {% endfor %}
     </ul>
-</div>
+</section>
