@@ -38,7 +38,7 @@ jobs:
         git commit -m "Update Gemfile.lock"
         git push
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
 
     - name: Build the site
       run: bundle exec jekyll build
