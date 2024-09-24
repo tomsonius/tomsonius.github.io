@@ -7,7 +7,7 @@ excerpt: "Exploring the critical ethical issues surrounding AI, from bias to acc
 display_image: "/assets/images/ethics-of-ai.png"
 ---
 
-![Ethics of AI]( {{ '/assets/images/ai-ethics.png' | relative_url }} ){:.post-image}
+![Ethics of AI]( {{ '/assets/images/ethics-of-ai.png' | relative_url }} ){:.post-image}
 
 
 As artificial intelligence (AI) continues to advance, the ethical implications of its development and deployment become ever more critical. The power of AI is undeniable, but so too are the risks associated with its misuse.
