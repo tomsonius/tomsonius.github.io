@@ -58,7 +58,7 @@ nav ul li a:hover {
 
 /* Container */
 .container {
-    width: 90%; /* Change to 90% to prevent overflow */
+    width: 90%;
     margin: auto;
     padding: 20px 0;
     box-sizing: border-box;
@@ -108,10 +108,9 @@ nav ul li a:hover {
 
 .post-grid {
     display: flex;
-    flex-wrap: wrap;
     gap: 20px;
-    justify-content: space-between;
-    align-items: flex-start; /* Ensure boxes align at the top */
+    justify-content: center; /* Center the post grid on desktop */
+    flex-wrap: wrap;
 }
 
 .post {
@@ -120,7 +119,7 @@ nav ul li a:hover {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 30%;
+    width: calc(33.333% - 40px); /* 3 posts per row */
     max-width: 300px;
     text-align: center;
     height: auto;
@@ -232,10 +231,6 @@ footer p, footer a {
     color: #ddd;
     margin: 7px 0;
     text-decoration: none;
-}
-
-footer a:hover {
-    color: #ffdd57;
 }
 
 /* Responsive Design */
