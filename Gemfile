@@ -11,14 +11,18 @@
 source "https://rubygems.org"
 
 gem "jekyll", "~> 3.9.0"
-gem "webrick", "~> 1.7"
 gem "jekyll-remote-theme"
 gem "jekyll-sitemap"
 gem "kramdown-parser-gfm"
-gem "jekyll-seo-tag" # Add this line
+gem "jekyll-seo-tag"
 
 group :jekyll_plugins do
   gem "jekyll-feed"
+end
+
+# Use WEBrick only for development and testing
+group :development, :test do
+  gem "webrick", "~> 1.7"
 end
 
 platforms :mingw, :x64_mingw, :mswin, :jruby do
@@ -27,3 +31,4 @@ platforms :mingw, :x64_mingw, :mswin, :jruby do
 end
 
 gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
+
