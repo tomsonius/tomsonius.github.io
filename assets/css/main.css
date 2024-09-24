@@ -58,22 +58,22 @@ nav ul li a:hover {
 
 /* Container */
 .container {
-    width: 90%; /* Change to 90% to prevent overflow */
+    width: 90%;
     margin: auto;
     padding: 20px 0;
-    box-sizing: border-box; /* Ensure padding doesn't cause overflow */
+    box-sizing: border-box;
 }
 
 /* About Section */
 .about {
     display: flex;
-    flex-wrap: wrap; /* Ensure content wraps on small screens */
+    flex-wrap: wrap;
     align-items: center;
     text-align: left;
     border-bottom: 2px solid #e0e0e0;
     padding-bottom: 20px;
     width: 100%;
-    box-sizing: border-box; /* Ensure content doesn't overflow */
+    box-sizing: border-box;
 }
 
 .about img {
@@ -92,7 +92,7 @@ nav ul li a:hover {
     font-size: 18px;
     color: #444;
     line-height: 1.8;
-    max-width: 100%; /* Ensure text stays within viewport */
+    max-width: 100%;
 }
 
 .highlight {
@@ -108,9 +108,9 @@ nav ul li a:hover {
 
 .post-grid {
     display: flex;
-    justify-content: space-evenly; /* Evenly distribute posts */
+    justify-content: space-between; /* Evenly distribute posts */
     gap: 20px;
-    align-items: flex-start; /* Ensure boxes align at the top */
+    align-items: stretch;
 }
 
 .post {
@@ -119,10 +119,8 @@ nav ul li a:hover {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 30%; /* Keep it within 30% width for 3-column layout */
-    max-width: 300px;
+    width: 30%;
     text-align: center;
-    height: auto;
 }
 
 .post img {
@@ -140,7 +138,6 @@ nav ul li a:hover {
     margin: 10px 0;
     color: #004085;
     text-align: center;
-    max-width: 100%;
 }
 
 .post p {
@@ -157,27 +154,18 @@ nav ul li a:hover {
     border-radius: 5px;
     background: #ff5722;
     transition: background 0.3s ease, color 0.3s ease;
-    margin-top: 10px; /* Add margin to space between text and button */
+    margin-top: 10px;
 }
 
-.post a:hover {
-    background: #e64a19;
-}
-
-.post:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* Horizontal Orange Bar Below Image */
+/* Orange Bar Styling */
 .post .orange-bar {
     width: 100%; /* Full width under the image */
     height: 6px; /* Horizontal bar height */
     background-color: #ff5722;
-    margin: 10px 0; /* Proper spacing below the image */
+    margin: 10px 0;
 }
 
-/* Newsletter Section Styling */
+/* Newsletter Section */
 .newsletter-section {
     background-color: #f8f9fa;
     padding: 40px 0;
@@ -199,13 +187,13 @@ nav ul li a:hover {
     margin-right: 10px;
     display: inline-block;
     vertical-align: middle;
-    box-sizing: border-box; /* Fix width behavior */
+    box-sizing: border-box;
 }
 
 .newsletter button {
     padding: 12px 20px;
     font-size: 17px;
-    background: #ff5722; /* Orange color for the button */
+    background: #ff5722;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -216,9 +204,8 @@ nav ul li a:hover {
 }
 
 .newsletter button:hover {
-    background: #e64a19; /* Darker shade on hover */
+    background: #e64a19;
 }
-
 
 /* Footer Styling */
 footer {
@@ -243,17 +230,13 @@ footer p, footer a {
         width: 95%;
     }
 
+    .post-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
     .post {
         width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .about {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .about img {
         margin-bottom: 20px;
     }
 
@@ -262,7 +245,6 @@ footer p, footer a {
     }
 }
 
-/* Mobile Devices */
 @media (max-width: 768px) {
     .post {
         width: 100%;
