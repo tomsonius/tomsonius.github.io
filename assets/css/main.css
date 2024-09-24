@@ -107,6 +107,7 @@ nav ul li a:hover {
     display: flex;
     gap: 20px;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .post {
@@ -273,8 +274,8 @@ footer a:hover {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .post {
-        width: 48%;
+    .container {
+        width: 95%; /* Wider content on mobile */
     }
 
     .about {
@@ -286,18 +287,60 @@ footer a:hover {
         margin-bottom: 20px;
     }
 
+    .post-grid {
+        display: block; /* Stack posts vertically on mobile */
+    }
+
+    .post {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
     .newsletter input[type="email"] {
-        width: 70%;
+        width: 90%;
         margin: 10px 0;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    nav ul li a {
+        display: block;
+        width: 100%;
+        text-align: center;
     }
 }
 
 @media (max-width: 480px) {
     .post {
         width: 100%;
+        margin-bottom: 20px;
     }
 
     .newsletter input[type="email"] {
         width: 100%;
+    }
+
+    /* Adjust font size for mobile devices */
+    body {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2, h3 {
+        font-size: 1.4rem;
+    }
+
+    .post header h1 {
+        font-size: 2rem; /* Slightly smaller for mobile */
+    }
+
+    .post-content {
+        font-size: 16px; /* Adjust text size for mobile */
     }
 }
