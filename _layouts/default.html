@@ -4,27 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }} - {{ site.title }}</title>
-    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav>
-        <ul>
-            <li><a href="{{ '/' | relative_url }}">Home</a></li>
-            <li><a href="{{ '/blog.html' | relative_url }}">Blog</a></li>
-            <li><a href="{{ '/about.html' | relative_url }}">About</a></li>
-            <li><a href="{{ '/contact.html' | relative_url }}">Contact</a></li>
-        </ul>
-    </nav>
+    <header>
+        <h1>{{ site.title }}</h1>
+        <nav>
+            <a href="{{ '/' | relative_url }}">Home</a>
+            <a href="{{ '/blog.html' | relative_url }}">Blog</a>
+            <a href="{{ '/about.html' | relative_url }}">About</a>
+            <a href="{{ '/contact.html' | relative_url }}">Contact</a>
+        </nav>
+    </header>
 
     <!-- Page Content -->
     <main>
         {{ content }}
     </main>
 
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 AI Insights Blog. All rights reserved.</p>
+        <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}. All Rights Reserved.</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        <p>Follow us on 
+            <a href="#">Twitter</a>, 
+            <a href="#">LinkedIn</a>, 
+            <a href="#">Facebook</a>
+        </p>
     </footer>
 </body>
 </html>
