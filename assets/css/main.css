@@ -10,6 +10,13 @@ body {
     overflow-x: hidden; /* Hide horizontal overflow */
 }
 
+/* Wrapper for all content */
+.wrapper {
+    max-width: 1200px; /* Adjust this to control max width */
+    margin: 0 auto; /* Center the content */
+    padding: 0 20px; /* Add padding to prevent content touching the screen edges */
+}
+
 /* Header Styling */
 header {
     background: #004085;
@@ -17,7 +24,7 @@ header {
     padding: 10px 0;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    width: 100%; /* Ensure header spans the full width */
+    width: 100%;
     overflow: hidden;
 }
 
@@ -26,8 +33,8 @@ nav {
     background-color: #004085;
     padding: 10px 0;
     text-align: center;
-    width: 100%; /* Ensure nav spans the full width */
-    overflow: hidden; /* Hide overflow */
+    width: 100%;
+    overflow: hidden;
 }
 
 nav ul {
@@ -163,10 +170,8 @@ nav ul li a:hover {
     height: 10px;
     width: 100%; /* Ensure it spans the full width of the post box */
     margin: 0 auto; /* Center it */
-    position: relative;
-    top: -10px; /* Adjusts the position to keep it below the image */
     border-radius: 5px 5px 0 0; /* Rounded corners at the top */
-    display: block; /* Make sure it spans the full width */
+    display: block;
 }
 
 /* Newsletter Section */
@@ -179,29 +184,29 @@ nav ul li a:hover {
 
 .newsletter h2,
 .newsletter p {
-    text-align: center; /* Ensure all text in the newsletter is centered */
+    text-align: center;
 }
 
 .newsletter form {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px; /* Add a gap between the input and button */
+    gap: 10px;
 }
 
 .newsletter input[type="email"] {
     padding: 12px;
     font-size: 17px;
-    width: 50%; /* Adjust width */
+    width: 50%; 
     border: 1px solid #ccc;
     border-radius: 5px;
-    box-sizing: border-box; /* Fix width behavior */
+    box-sizing: border-box;
 }
 
 .newsletter button {
     padding: 12px 20px;
     font-size: 17px;
-    background: #ff5722; /* Orange color for the button */
+    background: #ff5722;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -211,7 +216,7 @@ nav ul li a:hover {
 }
 
 .newsletter button:hover {
-    background: #e64a19; /* Darker shade on hover */
+    background: #e64a19;
 }
 
 /* Footer Styling */
@@ -243,23 +248,22 @@ footer p, footer a {
     }
 
     .post {
-        width: 80%; /* Change from 100% to 80% for a nicer layout on larger tablets */
+        width: 80%;
         margin-bottom: 20px;
     }
 
     .newsletter form {
-        flex-direction: column; /* Stack the input and button vertically */
+        flex-direction: column;
         width: 100%;
         align-items: center;
     }
 
     .newsletter input[type="email"],
     .newsletter button {
-        width: 80%; /* Adjust to 80% for a more centered look */
+        width: 80%;
         margin-bottom: 10px;
     }
 }
-
 
 @media (max-width: 768px) {
     .post-grid {
@@ -268,18 +272,18 @@ footer p, footer a {
     }
 
     .post {
-        width: 100%; /* Full width for small screens */
+        width: 100%;
         margin-bottom: 20px;
     }
 
     .newsletter form {
-        flex-direction: column; /* Ensure form elements stack on top of each other */
-        width: 100%; /* Ensure the form takes up the full width on small screens */
+        flex-direction: column;
+        width: 100%;
     }
 
     .newsletter input[type="email"],
     .newsletter button {
-        width: 90%; /* Make the input and button almost full width */
+        width: 90%;
         margin-bottom: 10px;
     }
 
@@ -308,4 +312,3 @@ footer p, footer a {
         height: 80px;
     }
 }
-
