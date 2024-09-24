@@ -106,12 +106,11 @@ nav ul li a:hover {
 
 .post-grid {
     display: flex;
-    gap: 20px;
     justify-content: space-between;
+    gap: 20px;
     flex-wrap: wrap;
 }
 
-/* Align the three posts evenly on desktop */
 .post {
     background: #fff;
     padding: 20px;
@@ -120,13 +119,14 @@ nav ul li a:hover {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: 32%; /* Take up equal space to fit 3 posts in a row */
     text-align: center;
+    min-height: 300px; /* Ensure consistent post height */
 }
 
-/* Make images responsive inside posts */
 .post img {
     width: 100%;
     max-width: 300px;
-    height: auto;
+    height: 200px; /* Ensure consistent image height */
+    object-fit: cover; /* Cover the entire space */
     border-radius: 10px;
     transition: transform 0.3s ease;
 }
