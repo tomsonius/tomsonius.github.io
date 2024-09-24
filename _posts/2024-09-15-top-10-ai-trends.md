@@ -4,9 +4,10 @@ title: "Top 10 AI Trends to Watch in 2024"
 date: 2024-09-15
 categories: [ai, trends]
 excerpt: "Discover the top AI trends that are set to shape the future in 2024."
+display_image: "/assets/images/ai-trends-2024.png"
 ---
 
-![AI Trends 2024](https://via.placeholder.com/400x200)
+![AI Trends 2024]( {{ '/assets/images/ai-trends-2024.png' | relative_url }} ){:style="width: 100%; max-width: 200px; height: auto; margin: 0 auto;"}
 
 As we look towards 2024, the landscape of artificial intelligence (AI) is set to undergo significant changes. Here are the top 10 AI trends that you need to watch:
 
