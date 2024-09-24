@@ -108,9 +108,8 @@ nav ul li a:hover {
 
 .post-grid {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-evenly; /* Evenly distribute posts */
     gap: 20px;
-    justify-content: space-between;
     align-items: flex-start; /* Ensure boxes align at the top */
 }
 
@@ -175,7 +174,7 @@ nav ul li a:hover {
     width: 100%; /* Full width under the image */
     height: 6px; /* Horizontal bar height */
     background-color: #ff5722;
-    margin: 0 auto; /* Center the bar */
+    margin: 10px 0; /* Proper spacing below the image */
 }
 
 /* Newsletter Section Styling */
@@ -186,16 +185,9 @@ nav ul li a:hover {
     text-align: center;
 }
 
-.newsletter h2 {
-    font-size: 24px;
-    color: #004085;
-    margin-bottom: 15px;
-}
-
+.newsletter h2,
 .newsletter p {
-    font-size: 16px;
-    color: #666;
-    margin-bottom: 20px;
+    text-align: center; /* Ensure all text in the newsletter is centered */
 }
 
 .newsletter input[type="email"] {
