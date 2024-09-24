@@ -108,8 +108,8 @@ nav ul li a:hover {
 
 .post-grid {
     display: flex;
+    justify-content: center; /* Center the entire grid */
     gap: 20px;
-    justify-content: center; /* Center the post grid on desktop */
     flex-wrap: wrap;
 }
 
@@ -119,8 +119,8 @@ nav ul li a:hover {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: calc(33.333% - 40px); /* 3 posts per row */
-    max-width: 300px;
+    width: 30%; /* Make sure the width doesn't get too large */
+    max-width: 300px; /* Fix the max width */
     text-align: center;
     height: auto;
     box-sizing: border-box;
@@ -183,6 +183,7 @@ nav ul li a:hover {
     padding: 40px 0;
     border-top: 2px solid #e0e0e0;
     text-align: center;
+    margin: auto; /* Center the entire newsletter section */
 }
 
 .newsletter h2 {
