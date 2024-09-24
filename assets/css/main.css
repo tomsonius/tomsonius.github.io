@@ -130,8 +130,7 @@ nav ul li a:hover {
 .post h3 {
     font-size: 22px;
     margin: 15px 0;
-    color: #fff;  /* Change this to white */
-    text-align: center; /* Center the title if needed */
+    color: #222;  /* Change this to white */
 }
 
 .post p {
