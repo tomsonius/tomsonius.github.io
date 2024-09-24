@@ -6,8 +6,8 @@ body {
     line-height: 1.6;
     background-color: #f8f9fa;
     color: #333;
-    max-width: 100%;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    max-width: 100%; /* Ensure body doesn't exceed viewport */
+    overflow-x: hidden; /* Hide horizontal overflow */
 }
 
 /* Header Styling */
@@ -17,6 +17,8 @@ header {
     padding: 10px 0;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    width: 100%; /* Ensure header spans the full width */
+    overflow: hidden;
 }
 
 /* Navigation Bar Styling */
@@ -24,6 +26,8 @@ nav {
     background-color: #004085;
     padding: 10px 0;
     text-align: center;
+    width: 100%; /* Ensure nav spans the full width */
+    overflow: hidden; /* Hide overflow */
 }
 
 nav ul {
@@ -54,23 +58,22 @@ nav ul li a:hover {
 
 /* Container */
 .container {
-    width: 90%;
+    width: 90%; /* Change to 90% to prevent overflow */
     margin: auto;
     padding: 20px 0;
+    box-sizing: border-box; /* Ensure padding doesn't cause overflow */
 }
 
 /* About Section */
-.about-section {
-    background-color: #f8f9fa;
-    padding: 40px 0;
-}
-
 .about {
     display: flex;
+    flex-wrap: wrap; /* Ensure content wraps on small screens */
     align-items: center;
     text-align: left;
     border-bottom: 2px solid #e0e0e0;
     padding-bottom: 20px;
+    width: 100%;
+    box-sizing: border-box; /* Ensure content doesn't overflow */
 }
 
 .about img {
@@ -78,6 +81,7 @@ nav ul li a:hover {
     border-radius: 50%;
     width: 100px;
     height: 100px;
+    max-width: 100px;
 }
 
 .about-text {
@@ -88,6 +92,7 @@ nav ul li a:hover {
     font-size: 18px;
     color: #444;
     line-height: 1.8;
+    max-width: 100%; /* Ensure text stays within viewport */
 }
 
 .highlight {
@@ -101,15 +106,11 @@ nav ul li a:hover {
     padding: 40px 0;
 }
 
-.posts {
-    text-align: left;
-}
-
 .post-grid {
     display: flex;
+    flex-wrap: wrap; /* Ensure posts wrap on small screens */
     gap: 20px;
     justify-content: center;
-    flex-wrap: wrap;
 }
 
 .post {
@@ -118,8 +119,8 @@ nav ul li a:hover {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 30%; /* Reduced to fit 3 posts side by side */
-    max-width: 300px;
+    width: 30%;
+    max-width: 300px; /* Ensure posts don't exceed screen width */
     text-align: center;
     height: auto;
 }
@@ -134,12 +135,12 @@ nav ul li a:hover {
     transition: transform 0.3s ease;
 }
 
-/* Home Page Post Titles */
-.home .post h3 {
+.post h3 {
     font-size: 18px;
     margin: 10px 0;
     color: #004085;
     text-align: center;
+    max-width: 100%; /* Ensure title doesn't overflow */
 }
 
 .post p {
@@ -167,55 +168,13 @@ nav ul li a:hover {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-.post:hover img {
-    transform: scale(1.08);
-}
-
-/* Newsletter Section */
-.newsletter-section {
-    background-color: #f8f9fa;
-    padding: 40px 0;
-    border-top: 2px solid #e0e0e0;
-}
-
-.newsletter {
-    text-align: center;
-}
-
-.newsletter input[type="email"] {
-    padding: 12px;
-    font-size: 17px;
-    width: 50%;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-right: 10px;
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.newsletter button {
-    padding: 12px 20px;
-    font-size: 17px;
-    background: #ff5722;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.newsletter button:hover {
-    background: #e64a19;
-}
-
 /* Footer Styling */
 footer {
     background: #004085;
     color: #fff;
     text-align: center;
     padding: 20px 0;
+    width: 100%;
 }
 
 footer p, footer a {
@@ -225,65 +184,16 @@ footer p, footer a {
     text-decoration: none;
 }
 
-footer a:hover {
-    color: #ffdd57;
-}
-
-/* Blog Post Page Styles */
-.post {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-    margin: 40px auto;
-}
-
-/* Styling for Full Article Titles (H1 in Blog Post Pages) */
-.post header h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-    color: #fff;
-    text-align: center;
-}
-
-.post header p {
-    font-size: 14px;
-    color: #666;
-    margin-bottom: 20px;
-}
-
-.post-content {
-    font-size: 18px;
-    line-height: 1.8;
-    color: #333;
-}
-
-.post-content img {
-    max-width: 100%;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-
-.post-content p {
-    margin-bottom: 20px;
-}
-
-.post footer {
-    font-size: 14px;
-    color: #999;
-    border-top: 1px solid #ddd;
-    margin-top: 30px;
-    padding-top: 10px;
-    text-align: center;
-}
-
 /* Responsive Design */
 
-/* Tablets and smaller laptops */
 @media (max-width: 1024px) {
     .container {
         width: 95%;
+    }
+
+    .post {
+        width: 100%;
+        margin-bottom: 20px;
     }
 
     .about {
@@ -295,29 +205,8 @@ footer a:hover {
         margin-bottom: 20px;
     }
 
-    .post-grid {
-        display: block;
-    }
-
-    .post {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
     .newsletter input[type="email"] {
-        width: 90%;
-        margin: 10px 0;
-    }
-
-    nav ul li {
-        display: block;
-        margin-bottom: 10px;
-    }
-
-    nav ul li a {
-        display: block;
         width: 100%;
-        text-align: center;
     }
 }
 
@@ -350,5 +239,10 @@ footer a:hover {
 
     .post-content {
         font-size: 16px;
+    }
+
+    .about img {
+        width: 80px;
+        height: 80px;
     }
 }
