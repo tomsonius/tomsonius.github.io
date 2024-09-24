@@ -159,10 +159,14 @@ nav ul li a:hover {
 
 /* Orange Bar Styling */
 .post .orange-bar {
-    width: 100%; /* Full width under the image */
-    height: 6px; /* Horizontal bar height */
     background-color: #ff5722;
-    margin: 10px 0;
+    height: 10px;
+    width: 100%; /* Ensure it spans the full width of the post box */
+    margin: 0 auto; /* Center it */
+    position: relative;
+    top: -10px; /* Adjusts the position to keep it below the image */
+    border-radius: 5px 5px 0 0; /* Rounded corners at the top */
+    display: block; /* Make sure it spans the full width */
 }
 
 /* Newsletter Section */
