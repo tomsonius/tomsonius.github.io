@@ -38,6 +38,8 @@ jobs:
         git add Gemfile.lock
         git commit -m "Update Gemfile.lock"
         git push
+      env:
+        PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}  # Ensures the token is correctly used
 
     - name: Build the site
       run: bundle exec jekyll build
