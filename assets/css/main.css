@@ -54,7 +54,7 @@ nav ul li a:hover {
 
 /* Container */
 .container {
-    width: 90%; /* Increased to allow more content without overflow */
+    width: 90%;
     margin: auto;
     padding: 20px 0;
 }
@@ -108,7 +108,7 @@ nav ul li a:hover {
 .post-grid {
     display: flex;
     gap: 20px;
-    justify-content: space-around; /* Ensure space is evenly distributed */
+    justify-content: center;
     flex-wrap: wrap;
 }
 
@@ -118,15 +118,17 @@ nav ul li a:hover {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 28%; /* Reduced width to fit three posts at full size */
+    width: 30%; /* Reduced to fit 3 posts side by side */
+    max-width: 300px;
     text-align: center;
-    height: 300px; /* Compact the height of each post */
+    height: auto;
 }
 
 .post img {
     width: 100%;
     max-width: 100%;
-    max-height: 120px; /* Limited image height for better fit */
+    height: auto;
+    max-height: 150px;
     object-fit: contain;
     border-radius: 10px;
     transition: transform 0.3s ease;
@@ -134,7 +136,7 @@ nav ul li a:hover {
 
 /* Home Page Post Titles */
 .home .post h3 {
-    font-size: 18px; /* Smaller title */
+    font-size: 18px;
     margin: 10px 0;
     color: #004085;
     text-align: center;
