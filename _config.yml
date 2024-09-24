@@ -52,3 +52,5 @@ jekyll-feed:
 jekyll-sitemap:
   changefreq: daily
   priority: 0.7
+
+future: true
