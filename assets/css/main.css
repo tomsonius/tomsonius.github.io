@@ -126,10 +126,12 @@ nav ul li a:hover {
     transition: transform 0.3s ease;
 }
 
+/* Styling for Post Titles */
 .post h3 {
     font-size: 22px;
     margin: 15px 0;
-    color: #222;
+    color: #fff;  /* Change this to white */
+    text-align: center; /* Center the title if needed */
 }
 
 .post p {
@@ -229,10 +231,12 @@ footer a:hover {
     margin: 40px auto;
 }
 
+/* Styling for Full Article Titles (H1 in Blog Post Pages) */
 .post header h1 {
     font-size: 2.5em;
-    margin-bottom: 15px;
-    color: #004085;
+    margin-bottom: 10px;
+    color: #fff;  /* Make the title white */
+    text-align: center; /* Center the article title */
 }
 
 .post header p {
