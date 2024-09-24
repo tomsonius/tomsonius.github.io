@@ -4,10 +4,10 @@ title: "The Ethics of AI: What You Need to Know"
 date: 2024-09-15
 categories: [ai, ethics]
 excerpt: "Exploring the critical ethical issues surrounding AI, from bias to accountability."
-display_image: "/assets/images/ai-ethics.png"
+display_image: "/assets/images/ethics-of-ai.png"
 ---
 
-![Ethics of AI]( {{ '/assets/images/ai-ethics.png' | relative_url }} )
+![Ethics of AI]( {{ '/assets/images/ethics-of-ai.png' | relative_url }} )
 
 As artificial intelligence (AI) continues to advance, the ethical implications of its development and deployment become ever more critical. The power of AI is undeniable, but so too are the risks associated with its misuse.
 
