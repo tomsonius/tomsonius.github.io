@@ -1,4 +1,40 @@
 ---
-layout: home
+layout: default
 title: AI Insights Blog
 ---
+<section class="about">
+    <img src="https://via.placeholder.com/100" alt="About This Blog">
+    <h2>About This Blog</h2>
+    <p>Welcome to <span style="color: orange;">AI Insights Blog</span>, where we explore the <span style="color: orange;">transformative power of AI</span>. Dive into <span style="color: orange;">insightful content</span> on the latest advancements, ethical considerations, and industry trends in AI. Stay informed and ahead of the curve!</p>
+</section>
+
+<section class="posts">
+    <h2>Recent Posts</h2>
+    <div class="post-grid">
+        {% if site.posts and site.posts.size > 0 %}
+            {% for post in site.posts limit:3 %}
+                <div class="post">
+                    {% if post.display_image %}
+                        <a href="{{ post.url }}">
+                            <img src="{{ post.display_image }}" alt="{{ post.title }}">
+                        </a>
+                    {% endif %}
+                    <h3>{{ post.title }}</h3>
+                    <p>{{ post.excerpt }}</p>
+                    <a href="{{ post.url }}" class="button">Read More</a>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>No posts available.</p>
+        {% endif %}
+    </div>
+</section>
+
+<section class="newsletter">
+    <h2>Subscribe to Our Newsletter</h2>
+    <p>Get the latest AI news and updates delivered straight to your inbox.</p>
+    <form action="#">
+        <input type="email" placeholder="Enter your email">
+        <button type="submit">Subscribe</button>
+    </form>
+</section>
