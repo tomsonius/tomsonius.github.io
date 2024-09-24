@@ -6,8 +6,8 @@ body {
     line-height: 1.6;
     background-color: #f8f9fa;
     color: #333;
-    max-width: 100%;
-    overflow-x: hidden;
+    max-width: 100%; /* Ensure body doesn't exceed viewport */
+    overflow-x: hidden; /* Hide horizontal overflow */
 }
 
 /* Header Styling */
@@ -17,7 +17,8 @@ header {
     padding: 10px 0;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    width: 100%;
+    width: 100%; /* Ensure header spans the full width */
+    overflow: hidden;
 }
 
 /* Navigation Bar Styling */
@@ -25,7 +26,8 @@ nav {
     background-color: #004085;
     padding: 10px 0;
     text-align: center;
-    width: 100%;
+    width: 100%; /* Ensure nav spans the full width */
+    overflow: hidden; /* Hide overflow */
 }
 
 nav ul {
@@ -56,21 +58,22 @@ nav ul li a:hover {
 
 /* Container */
 .container {
-    width: 90%;
+    width: 90%; /* Change to 90% to prevent overflow */
     margin: auto;
     padding: 20px 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Ensure padding doesn't cause overflow */
 }
 
 /* About Section */
 .about {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Ensure content wraps on small screens */
     align-items: center;
     text-align: left;
     border-bottom: 2px solid #e0e0e0;
     padding-bottom: 20px;
     width: 100%;
+    box-sizing: border-box; /* Ensure content doesn't overflow */
 }
 
 .about img {
@@ -78,6 +81,7 @@ nav ul li a:hover {
     border-radius: 50%;
     width: 100px;
     height: 100px;
+    max-width: 100px;
 }
 
 .about-text {
@@ -88,6 +92,7 @@ nav ul li a:hover {
     font-size: 18px;
     color: #444;
     line-height: 1.8;
+    max-width: 100%; /* Ensure text stays within viewport */
 }
 
 .highlight {
@@ -103,9 +108,10 @@ nav ul li a:hover {
 
 .post-grid {
     display: flex;
-    justify-content: center;
-    gap: 20px;
     flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: flex-start; /* Ensure boxes align at the top */
 }
 
 .post {
@@ -114,18 +120,20 @@ nav ul li a:hover {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 30%;
+    width: 30%; /* Keep it within 30% width for 3-column layout */
     max-width: 300px;
     text-align: center;
-    box-sizing: border-box;
+    height: auto;
 }
 
 .post img {
     width: 100%;
-    max-width: 200px;
+    max-width: 100%;
     height: auto;
-    margin: 0 auto;
-    display: block;
+    max-height: 200px;
+    object-fit: contain;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
 }
 
 .post h3 {
@@ -133,6 +141,7 @@ nav ul li a:hover {
     margin: 10px 0;
     color: #004085;
     text-align: center;
+    max-width: 100%;
 }
 
 .post p {
@@ -149,7 +158,7 @@ nav ul li a:hover {
     border-radius: 5px;
     background: #ff5722;
     transition: background 0.3s ease, color 0.3s ease;
-    margin-top: 10px;
+    margin-top: 10px; /* Add margin to space between text and button */
 }
 
 .post a:hover {
@@ -161,12 +170,12 @@ nav ul li a:hover {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Orange Bar */
-.orange-bar {
-    width: 100%; /* Make the bar span the full width of the post */
-    height: 8px;
+/* Horizontal Orange Bar Below Image */
+.post .orange-bar {
+    width: 100%; /* Full width under the image */
+    height: 6px; /* Horizontal bar height */
     background-color: #ff5722;
-    margin-top: 10px;
+    margin: 0 auto; /* Center the bar */
 }
 
 /* Newsletter Section Styling */
@@ -175,45 +184,36 @@ nav ul li a:hover {
     padding: 40px 0;
     border-top: 2px solid #e0e0e0;
     text-align: center;
-    max-width: 600px;
-    margin: auto;
 }
 
 .newsletter h2 {
     font-size: 24px;
     color: #004085;
     margin-bottom: 15px;
-    text-align: center;
 }
 
 .newsletter p {
     font-size: 16px;
     color: #666;
     margin-bottom: 20px;
-    text-align: center; /* Center the newsletter description */
-}
-
-.newsletter form {
-    display: flex;
-    justify-content: center; /* Center the form */
-    gap: 10px;
-    flex-wrap: wrap;
 }
 
 .newsletter input[type="email"] {
     padding: 12px;
     font-size: 17px;
+    width: 50%;
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: 100%;
-    max-width: 350px;
-    box-sizing: border-box;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    box-sizing: border-box; /* Fix width behavior */
 }
 
 .newsletter button {
     padding: 12px 20px;
     font-size: 17px;
-    background: #ff5722;
+    background: #ff5722; /* Orange color for the button */
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -221,12 +221,12 @@ nav ul li a:hover {
     transition: background 0.3s ease;
     display: inline-block;
     vertical-align: middle;
-    margin-top: 10px;
 }
 
 .newsletter button:hover {
-    background: #e64a19;
+    background: #e64a19; /* Darker shade on hover */
 }
+
 
 /* Footer Styling */
 footer {
@@ -246,14 +246,13 @@ footer p, footer a {
 
 /* Responsive Design */
 
-/* Tablets */
 @media (max-width: 1024px) {
     .container {
         width: 95%;
     }
 
     .post {
-        width: 48%;
+        width: 100%;
         margin-bottom: 20px;
     }
 
