@@ -6,8 +6,8 @@ body {
     line-height: 1.6;
     background-color: #f8f9fa;
     color: #333;
-    max-width: 100%; /* Prevent any horizontal scrolling */
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    max-width: 100%; /* Prevent horizontal scrolling */
+    overflow-x: hidden;
 }
 
 /* Header Styling */
@@ -114,35 +114,35 @@ nav ul li a:hover {
 
 .post {
     background: #fff;
-    padding: 20px;
+    padding: 15px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 32%; /* Three posts per row */
-    min-height: 250px; /* Ensure consistent post height */
+    width: 32%;
     text-align: center;
+    height: 350px; /* Reduce the height for a more compact display */
 }
 
 .post img {
     width: 100%;
     max-width: 100%;
-    height: 200px; /* Ensure consistent image height */
-    object-fit: cover;
+    max-height: 150px; /* Limit the height of the image to keep it compact */
+    object-fit: contain; /* Make sure the full image is shown without cropping */
     border-radius: 10px;
     transition: transform 0.3s ease;
 }
 
 /* Home Page Post Titles */
 .home .post h3 {
-    font-size: 22px;
-    margin: 15px 0;
-    color: #004085;  /* Keep them blue */
-    text-align: center; /* Center them */
+    font-size: 20px; /* Slightly smaller title to fit better */
+    margin: 10px 0;
+    color: #004085;
+    text-align: center;
 }
 
 .post p {
-    font-size: 15px;
-    margin-bottom: 15px;
+    font-size: 14px;
+    margin-bottom: 10px;
     color: #666;
 }
 
@@ -150,7 +150,7 @@ nav ul li a:hover {
     text-decoration: none;
     color: #ffffff;
     font-weight: bold;
-    padding: 12px 18px;
+    padding: 8px 16px;
     border-radius: 5px;
     background: #ff5722;
     transition: background 0.3s ease, color 0.3s ease;
@@ -241,8 +241,8 @@ footer a:hover {
 .post header h1 {
     font-size: 2.5em;
     margin-bottom: 10px;
-    color: #fff;  /* Make the title white */
-    text-align: center; /* Center the article title */
+    color: #fff;
+    text-align: center;
 }
 
 .post header p {
@@ -281,7 +281,7 @@ footer a:hover {
 /* Tablets and smaller laptops */
 @media (max-width: 1024px) {
     .container {
-        width: 95%; /* Wider content on mobile */
+        width: 95%;
     }
 
     .about {
@@ -344,10 +344,10 @@ footer a:hover {
     }
 
     .post header h1 {
-        font-size: 2rem; /* Slightly smaller for mobile */
+        font-size: 2rem;
     }
 
     .post-content {
-        font-size: 16px; /* Adjust text size for mobile */
+        font-size: 16px;
     }
 }
