@@ -178,33 +178,36 @@ nav ul li a:hover {
     text-align: center; /* Ensure all text in the newsletter is centered */
 }
 
+.newsletter form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Add a gap between the input and button */
+}
+
 .newsletter input[type="email"] {
     padding: 12px;
     font-size: 17px;
-    width: 50%;
+    width: 50%; /* Adjust width */
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-right: 10px;
-    display: inline-block;
-    vertical-align: middle;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Fix width behavior */
 }
 
 .newsletter button {
     padding: 12px 20px;
     font-size: 17px;
-    background: #ff5722;
+    background: #ff5722; /* Orange color for the button */
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s ease;
     display: inline-block;
-    vertical-align: middle;
 }
 
 .newsletter button:hover {
-    background: #e64a19;
+    background: #e64a19; /* Darker shade on hover */
 }
 
 /* Footer Styling */
@@ -236,23 +239,44 @@ footer p, footer a {
     }
 
     .post {
-        width: 100%;
+        width: 80%; /* Change from 100% to 80% for a nicer layout on larger tablets */
         margin-bottom: 20px;
     }
 
-    .newsletter input[type="email"] {
+    .newsletter form {
+        flex-direction: column; /* Stack the input and button vertically */
         width: 100%;
+        align-items: center;
+    }
+
+    .newsletter input[type="email"],
+    .newsletter button {
+        width: 80%; /* Adjust to 80% for a more centered look */
+        margin-bottom: 10px;
     }
 }
 
+
 @media (max-width: 768px) {
+    .post-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
     .post {
-        width: 100%;
+        width: 100%; /* Full width for small screens */
         margin-bottom: 20px;
     }
 
-    .newsletter input[type="email"] {
-        width: 100%;
+    .newsletter form {
+        flex-direction: column; /* Ensure form elements stack on top of each other */
+        width: 100%; /* Ensure the form takes up the full width on small screens */
+    }
+
+    .newsletter input[type="email"],
+    .newsletter button {
+        width: 90%; /* Make the input and button almost full width */
+        margin-bottom: 10px;
     }
 
     body {
@@ -280,3 +304,4 @@ footer p, footer a {
         height: 80px;
     }
 }
+
