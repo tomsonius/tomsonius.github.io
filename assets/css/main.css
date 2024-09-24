@@ -6,6 +6,7 @@ body {
     line-height: 1.6;
     background-color: #f8f9fa;
     color: #333;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 /* Header Styling */
@@ -53,7 +54,7 @@ nav ul li a:hover {
 /* Container */
 .container {
     width: 85%;
-    margin: auto;
+    margin: 0 auto;
     padding: 20px 0;
 }
 
@@ -273,7 +274,7 @@ footer a:hover {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .container {
         width: 95%; /* Wider content on mobile */
     }
@@ -313,7 +314,7 @@ footer a:hover {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     .post {
         width: 100%;
         margin-bottom: 20px;
