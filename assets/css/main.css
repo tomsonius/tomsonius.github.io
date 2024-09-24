@@ -133,6 +133,7 @@ nav ul li a:hover {
     object-fit: contain;
     border-radius: 10px;
     transition: transform 0.3s ease;
+    margin: 0 auto; /* Center the image */
 }
 
 .post h3 {
@@ -166,6 +167,14 @@ nav ul li a:hover {
 .post:hover {
     transform: translateY(-8px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.orange-bar {
+    display: block;
+    width: 80%;
+    height: 8px;
+    background-color: #ff5722;
+    margin: 10px auto; /* Center the orange bar */
 }
 
 /* Newsletter Section Styling */
@@ -211,6 +220,7 @@ nav ul li a:hover {
     transition: background 0.3s ease;
     display: inline-block;
     vertical-align: middle;
+    margin-top: 15px; /* Add some margin above the button */
 }
 
 .newsletter button:hover {
@@ -242,7 +252,7 @@ footer p, footer a {
     }
 
     .post {
-        width: 48%; /* Two columns on tablet */
+        width: 48%;
         margin-bottom: 20px;
     }
 
