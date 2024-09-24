@@ -4,9 +4,12 @@ title: "Understanding Neural Networks"
 date: 2024-09-15
 categories: [ai, neural-networks]
 excerpt: "A deep dive into the fundamentals of neural networks and their applications."
+display_image: "/assets/images/understanding-neural-networks.png"
 ---
 
-![Understanding Neural Networks](https://via.placeholder.com/400x200)
+![Understanding Neural Networks]( {{ '/assets/images/understanding-neural-networks.png' | relative_url }} ){:style="width: 100%; max-width: 200px; height: auto; margin: 0 auto;"}
+
+
 
 Neural networks are the driving force behind many of the advancements in artificial intelligence (AI) today. These complex systems, inspired by the human brain, have the ability to learn from data and make predictions.
 
