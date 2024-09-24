@@ -126,11 +126,12 @@ nav ul li a:hover {
     transition: transform 0.3s ease;
 }
 
-/* Styling for Post Titles */
-.post h3 {
+/* Home Page Post Titles */
+.home .post h3 {
     font-size: 22px;
     margin: 15px 0;
-    color: #222;  /* Change this to white */
+    color: #004085;  /* Keep them blue */
+    text-align: center; /* Center them if needed */
 }
 
 .post p {
