@@ -9,7 +9,7 @@ on:
       - main
 
 permissions:
-  contents: read
+  contents: write  # Allow write access to the repository content
   id-token: write
 
 jobs:
@@ -34,12 +34,11 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git remote set-url origin https://${{ secrets.PERSONAL_TOKEN }}@github.com/tomsonius/tomsonius.github.io.git
         git add Gemfile.lock
         git commit -m "Update Gemfile.lock"
         git push
       env:
-        PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}  # Ensures the token is correctly used
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Using built-in GITHUB_TOKEN
 
     - name: Build the site
       run: bundle exec jekyll build
@@ -67,5 +66,5 @@ jobs:
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v4
       with:
-        github_token: ${{ secrets.GH_TOKEN }}
+        github_token: ${{ secrets.GITHUB_TOKEN }}  # Using GITHUB_TOKEN for deployment
         publish_dir: ./_site
