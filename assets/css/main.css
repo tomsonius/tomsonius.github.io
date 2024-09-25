@@ -163,12 +163,10 @@ nav ul li a:hover {
 .post .orange-bar {
     background-color: #ff5722;
     height: 10px;
-    width: 100%; /* Full width of the post */
-    margin: 10px auto 0 auto; /* Center the bar horizontally */
-    display: block; /* Ensure it's a block-level element */
+    width: 100%; /* Full width of the post container */
+    margin-top: 10px; /* Space between the image and bar */
     border-radius: 0 0 5px 5px; /* Rounded bottom corners */
-    position: relative;
-    top: -10px; /* Move it to appear just under the image */
+    display: block; /* Ensure it behaves like a block element */
 }
 
 /* Newsletter Section */
