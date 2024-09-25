@@ -12,7 +12,7 @@ body {
 
 /* Wrapper for all content */
 .wrapper {
-    max-width: 1200px; /* Adjust this to control max width */
+    max-width: 1440px; /* Adjust this to control max width */
     margin: 0 auto; /* Center the content */
     padding: 0 20px; /* Add padding to prevent content touching the screen edges */
 }
