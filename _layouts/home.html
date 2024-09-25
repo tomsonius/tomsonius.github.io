@@ -31,7 +31,7 @@ title: Home
                                 <img src="{{ post.display_image }}" alt="{{ post.title }}">
                             </a>
                         {% endif %}
-                        <div class="orange-bar"></div> <!-- Insert the orange bar here -->
+                        <div class="orange-bar"></div> <!-- Keep this below the image -->
                         <h3>{{ post.title }}</h3>
                         <p>{{ post.excerpt }}</p>
                         <a href="{{ post.url }}" class="button">Read More</a>
@@ -42,6 +42,7 @@ title: Home
             {% endif %}
         </div>
     </section>
+
 
     
     <section class="newsletter">
