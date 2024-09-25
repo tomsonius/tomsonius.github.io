@@ -9,23 +9,27 @@
     {% include head.html %}
 </head>
 <body>
-    <div class="wrapper">
-        <!-- Include the header file -->
+    <!-- Keep header and nav outside the wrapper -->
+    <header>
         {% include header.html %}
+    </header>
 
-        <!-- Include the navigation bar file -->
+    <nav>
         {% include nav.html %}
+    </nav>
 
+    <div class="wrapper">
         <!-- Main content area where page-specific content is injected -->
         <main>
             {{ content }}
         </main>
-
-        <!-- Include the footer file -->
-        {% include footer.html %}
-
-        <!-- Optionally include any footer scripts -->
-        {% include footer-scripts.html %}
     </div>
+
+    <footer>
+        {% include footer.html %}
+    </footer>
+
+    <!-- Optionally include any footer scripts -->
+    {% include footer-scripts.html %}
 </body>
 </html>
