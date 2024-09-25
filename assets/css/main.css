@@ -6,15 +6,14 @@ body {
     line-height: 1.6;
     background-color: #f8f9fa;
     color: #333;
-    max-width: 100%; 
     overflow-x: hidden; /* Hide horizontal overflow */
 }
 
 /* Wrapper for constrained content */
 .wrapper {
-    max-width: 1280px; /* Constrain width of content */
+    max-width: 1280px; /* Reduce width for mid-sized screens */
     margin: 0 auto; /* Center the content */
-    padding: 20px; /* Padding for better spacing */
+    padding: 20px;
 }
 
 /* Header and Navigation Bar Styling */
@@ -23,8 +22,9 @@ header, nav {
     color: #fff;
     padding: 20px 0;
     text-align: center;
-    width: 100%;
+    width: 100vw; /* Make sure it stretches across the full screen */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    margin: 0; /* Remove margin */
 }
 
 nav ul {
@@ -53,7 +53,7 @@ nav ul li a:hover {
     color: #fff;
 }
 
-/* Main Content Container */
+/* Container */
 .container {
     width: 85%; /* Adjusted width for better responsiveness */
     margin: auto;
@@ -121,8 +121,9 @@ nav ul li a:hover {
 }
 
 .post img {
-    width: 100%;
-    max-width: 100%;
+    display: block; /* Ensure the image is treated as a block */
+    margin: 0 auto; /* Center the image horizontally */
+    max-width: 100%; /* Ensure the image does not overflow */
     height: auto;
     max-height: 200px;
     object-fit: contain;
@@ -158,9 +159,9 @@ nav ul li a:hover {
 .post .orange-bar {
     background-color: #ff5722;
     height: 10px;
-    width: calc(100% - 40px);
-    margin: 0 auto;
-    border-radius: 5px 5px 0 0;
+    width: 100%; /* Ensure it spans the full width of the post box */
+    margin: 0 auto; /* Center the orange bar horizontally */
+    border-radius: 5px 5px 0 0; /* Rounded corners at the top */
     display: block;
 }
 
@@ -215,7 +216,8 @@ footer {
     color: #fff;
     text-align: center;
     padding: 20px 0;
-    width: 100%; /* Ensure footer spans the entire width */
+    width: 100vw; /* Make sure it stretches across the full screen */
+    margin: 0;
 }
 
 footer p, footer a {
