@@ -11,20 +11,20 @@ body {
 
 /* Wrapper for constrained content */
 .wrapper {
-    max-width: 1280px; /* Reduce width for mid-sized screens */
-    margin: 0 auto; /* Center the content */
-    padding: 20px;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 /* Header and Navigation Bar Styling */
 header, nav {
     background: #004085;
     color: #fff;
-    padding: 20px 0;
+    padding: 10px 0; /* Reduced padding for smaller height */
     text-align: center;
-    width: 100vw; /* Make sure it stretches across the full screen */
+    width: 100vw; /* Full viewport width */
+    margin: 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    margin: 0; /* Remove margin */
 }
 
 nav ul {
@@ -55,7 +55,7 @@ nav ul li a:hover {
 
 /* Container */
 .container {
-    width: 85%; /* Adjusted width for better responsiveness */
+    width: 85%;
     margin: auto;
     padding: 20px 0;
     box-sizing: border-box;
@@ -106,7 +106,7 @@ nav ul li a:hover {
 .post-grid {
     display: flex;
     justify-content: space-between;
-    gap: 30px; /* Increased gap between posts */
+    gap: 30px; 
     align-items: stretch;
 }
 
@@ -121,9 +121,9 @@ nav ul li a:hover {
 }
 
 .post img {
-    display: block; /* Ensure the image is treated as a block */
-    margin: 0 auto; /* Center the image horizontally */
-    max-width: 100%; /* Ensure the image does not overflow */
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
     height: auto;
     max-height: 200px;
     object-fit: contain;
@@ -159,9 +159,9 @@ nav ul li a:hover {
 .post .orange-bar {
     background-color: #ff5722;
     height: 10px;
-    width: 100%; /* Ensure it spans the full width of the post box */
-    margin: 0 auto; /* Center the orange bar horizontally */
-    border-radius: 5px 5px 0 0; /* Rounded corners at the top */
+    width: 100%; /* Ensure the orange bar spans the full width horizontally */
+    margin: 10px auto 0 auto; /* Center it horizontally with a margin at the top */
+    border-radius: 0 0 5px 5px; /* Rounded bottom corners */
     display: block;
 }
 
@@ -216,7 +216,7 @@ footer {
     color: #fff;
     text-align: center;
     padding: 20px 0;
-    width: 100vw; /* Make sure it stretches across the full screen */
+    width: 100vw;
     margin: 0;
 }
 
@@ -225,6 +225,12 @@ footer p, footer a {
     color: #ddd;
     margin: 7px 0;
     text-decoration: none;
+}
+
+/* Remove the gap at the top and bottom of the page */
+main {
+    padding: 0;
+    margin: 0;
 }
 
 /* Responsive Design */
