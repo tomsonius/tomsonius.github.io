@@ -7,12 +7,17 @@
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 </head>
 <body>
-    <div class="wrapper">
-        <!-- Include the header and navigation -->
+    <!-- Keep header and nav outside the wrapper -->
+    <header>
         {% include header.html %}
-        {% include nav.html %}
+    </header>
 
-        <!-- Blog Post Content -->
+    <nav>
+        {% include nav.html %}
+    </nav>
+
+    <!-- Main wrapper content -->
+    <div class="wrapper">
         <main>
             <article class="post">
                 <header>
@@ -29,9 +34,10 @@
                 </footer>
             </article>
         </main>
-
-        <!-- Include the footer -->
-        {% include footer.html %}
     </div>
+
+    <footer>
+        {% include footer.html %}
+    </footer>
 </body>
 </html>
