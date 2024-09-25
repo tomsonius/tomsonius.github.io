@@ -23,8 +23,13 @@ header, nav {
     padding: 10px 0;
     text-align: center;
     width: 100vw; /* Full viewport width */
-    margin: 0;
+    margin: 0 auto;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Remove any gaps above and below */
+header {
+    margin-top: 0;
 }
 
 nav ul {
@@ -78,7 +83,6 @@ nav ul li a:hover {
     border-radius: 50%;
     width: 100px;
     height: 100px;
-    max-width: 100px;
 }
 
 .about-text {
@@ -159,10 +163,9 @@ nav ul li a:hover {
 .post .orange-bar {
     background-color: #ff5722;
     height: 10px;
-    width: 100%; /* Ensure the orange bar spans the full width horizontally */
-    margin: 10px auto 0 auto; /* Center it horizontally with a margin at the top */
-    border-radius: 0 0 5px 5px; /* Rounded bottom corners */
-    display: block;
+    width: 100%; /* Horizontal orange bar */
+    margin: 10px 0; /* Adjust margin for proper alignment */
+    border-radius: 5px 5px 0 0; /* Rounded bottom corners */
 }
 
 /* Newsletter Section */
@@ -203,7 +206,6 @@ nav ul li a:hover {
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s ease;
-    display: inline-block;
 }
 
 .newsletter button:hover {
@@ -216,8 +218,13 @@ footer {
     color: #fff;
     text-align: center;
     padding: 20px 0;
-    width: 100vw; /* Full viewport width */
-    margin: 0;
+    width: 100vw;
+    margin: 0 auto;
+}
+
+/* Remove gap at the bottom */
+footer {
+    margin-bottom: 0;
 }
 
 footer p, footer a {
@@ -228,7 +235,6 @@ footer p, footer a {
 }
 
 /* Responsive Design */
-
 @media (max-width: 1024px) {
     .container {
         width: 95%;
