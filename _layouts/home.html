@@ -3,6 +3,16 @@ layout: default
 title: Home
 ---
 
+<!-- Remove wrapper from the header and nav -->
+<header>
+    {% include header.html %}
+</header>
+
+<nav>
+    {% include nav.html %}
+</nav>
+
+<!-- Wrapper for main content -->
 <div class="wrapper">
     <section class="about">
         <img src="https://via.placeholder.com/100" alt="About This Blog">
@@ -41,3 +51,7 @@ title: Home
         </form>
     </section>
 </div>
+
+<footer>
+    {% include footer.html %}
+</footer>
