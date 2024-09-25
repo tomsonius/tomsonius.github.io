@@ -22,7 +22,7 @@ end
 
 # Use WEBrick only for development and testing
 group :development, :test do
-  gem "webrick", "~> 1.7"
+  gem "webrick", "~> 1.8"
 end
 
 platforms :mingw, :x64_mingw, :mswin, :jruby do
