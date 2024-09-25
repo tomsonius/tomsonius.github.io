@@ -13,14 +13,14 @@ body {
 .wrapper {
     max-width: 1280px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 20px;
 }
 
 /* Header and Navigation Bar Styling */
 header, nav {
     background: #004085;
     color: #fff;
-    padding: 10px 0; /* Reduced padding for smaller height */
+    padding: 10px 0;
     text-align: center;
     width: 100vw; /* Full viewport width */
     margin: 0;
@@ -106,7 +106,7 @@ nav ul li a:hover {
 .post-grid {
     display: flex;
     justify-content: space-between;
-    gap: 30px; 
+    gap: 30px;
     align-items: stretch;
 }
 
@@ -216,7 +216,7 @@ footer {
     color: #fff;
     text-align: center;
     padding: 20px 0;
-    width: 100vw;
+    width: 100vw; /* Full viewport width */
     margin: 0;
 }
 
@@ -225,12 +225,6 @@ footer p, footer a {
     color: #ddd;
     margin: 7px 0;
     text-decoration: none;
-}
-
-/* Remove the gap at the top and bottom of the page */
-main {
-    padding: 0;
-    margin: 0;
 }
 
 /* Responsive Design */
