@@ -7,30 +7,31 @@
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 </head>
 <body>
+    <div class="wrapper">
+        <!-- Include the header and navigation -->
+        {% include header.html %}
+        {% include nav.html %}
 
-    <!-- Include the header and navigation -->
-    {% include header.html %}
-    {% include nav.html %}
+        <!-- Blog Post Content -->
+        <main>
+            <article class="post">
+                <header>
+                    <h1>{{ page.title }}</h1>
+                    <p>{{ page.date | date: "%B %d, %Y" }} | Categories: {{ page.categories | join: ', ' }}</p>
+                </header>
+                
+                <div class="post-content">
+                    {{ content }}
+                </div>
 
-    <!-- Blog Post Content -->
-    <main>
-        <article class="post">
-            <header>
-                <h1>{{ page.title }}</h1>
-                <p>{{ page.date | date: "%B %d, %Y" }} | Categories: {{ page.categories | join: ', ' }}</p>
-            </header>
-            
-            <div class="post-content">
-                {{ content }}
-            </div>
+                <footer>
+                    <p>Posted in {{ page.categories | join: ', ' }}</p>
+                </footer>
+            </article>
+        </main>
 
-            <footer>
-                <p>Posted in {{ page.categories | join: ', ' }}</p>
-            </footer>
-        </article>
-    </main>
-
-    <!-- Include the footer -->
-    {% include footer.html %}
+        <!-- Include the footer -->
+        {% include footer.html %}
+    </div>
 </body>
 </html>
