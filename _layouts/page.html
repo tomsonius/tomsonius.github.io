@@ -2,8 +2,20 @@
 layout: default
 ---
 
+<header>
+    {% include header.html %}
+</header>
+
+<nav>
+    {% include nav.html %}
+</nav>
+
 <div class="wrapper">
     <section class="page-content">
         {{ content }}
     </section>
 </div>
+
+<footer>
+    {% include footer.html %}
+</footer>
